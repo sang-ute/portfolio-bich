@@ -1,0 +1,1507 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ngọc Bích — Portfolio</title>
+<meta name="description" content="Portfolio of Phan Thị Ngọc Bích — PR, communications and events.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FDFBF9}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.7}
+.site{position:relative;width:100%;height:100vh;overflow:hidden;font-family:'Inter',system-ui,sans-serif;color:#433F46;background:#FDFBF9}
+.pt{position:absolute;opacity:0;pointer-events:none;width:0;height:0;margin:0}
+.nav{position:absolute;top:0;left:0;right:0;z-index:10;height:88px;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;padding:0 56px;background:rgba(253,251,249,.94);border-bottom:1px solid #CCAEB9}
+.brand{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1;color:#352827;font-weight:500}
+.nav ul{display:flex;gap:36px;list-style:none;margin:0;padding:0}
+.nav a{display:inline-block;padding:12px 0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.track{display:flex;height:100vh;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#9CA9C8 transparent}
+.panel{flex:0 0 100%;width:100%;height:100vh;box-sizing:border-box;scroll-snap-align:start;padding:128px 96px 96px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow-y:auto}
+.inner{max-width:1280px;width:100%;margin:0 auto}
+.label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:0 0 24px}
+h1,h2,h3{font-weight:300;margin:0;letter-spacing:-.02em;line-height:1.04}
+h1{font-size:136px}
+h2{font-size:56px}
+h3{font-size:18px;font-weight:500;letter-spacing:0;margin:0 0 8px}
+p{font-size:18px;line-height:1.6;max-width:560px;margin:0}
+.intro{background:#352827;color:#FDFBF9}
+.intro{overflow:hidden}
+.intro .inner{position:relative;z-index:2}
+.hero-art{position:absolute;right:clamp(80px,10vw,160px);top:50%;width:min(40vh,380px);aspect-ratio:3/4;transform:translateY(-56%);z-index:1;pointer-events:none}
+.hero-art .arch{position:absolute;inset:0;border-radius:999px 999px 18px 18px;background:linear-gradient(165deg,#CCAEB9 0%,#B9B3CB 55%,#9CA9C8 100%);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.hero-art .arch:before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1.5px solid rgba(204,174,185,.5);border-radius:999px 999px 18px 18px;z-index:-1}
+.hero-art .sun{position:absolute;left:50%;top:26%;width:34%;aspect-ratio:1;margin-left:-17%;border-radius:50%;background:#FDFBF9;opacity:.92}
+.hero-art .ring{position:absolute;left:-22%;bottom:-6%;width:46%;aspect-ratio:1;border-radius:50%;background:#352827;border:1px solid rgba(204,174,185,.6);display:flex;align-items:center;justify-content:center}
+.hero-art .ring svg{width:100%;height:100%;animation:heroSpin 18s linear infinite}
+.hero-art .ring text{font-family:'Inter',system-ui,sans-serif;font-size:8.5px;letter-spacing:.04em;fill:#E6CBD5;font-weight:600}
+.hero-art .ring i{position:absolute;font-style:normal;color:#CCAEB9;font-size:22px}
+.hero-art .chip{position:absolute;padding:9px 18px;border-radius:999px;background:#FDFBF9;color:#352827;font-family:'Inter',system-ui,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;box-shadow:0 14px 30px -14px rgba(0,0,0,.55);animation:heroFloat 6s ease-in-out infinite}
+.hero-art .c1{right:-16%;top:14%}
+.hero-art .c2{right:-24%;top:52%;background:#352827;color:#E6CBD5;border:1px solid rgba(204,174,185,.5);animation-delay:-2s}
+.hero-art .c3{left:-12%;top:30%;background:#9CA9C8;animation-delay:-4s}
+@keyframes heroSpin{to{transform:rotate(360deg)}}
+@keyframes heroFloat{50%{transform:translateY(-10px)}}
+.intro .hero{animation:heroUp .9s cubic-bezier(.22,.61,.36,1) both}
+@keyframes heroUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero-art .ring svg,.hero-art .chip,.intro .hero{animation:none}}
+.hero{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:156px;line-height:.95;letter-spacing:-.02em;color:#FDFBF9}
+.hero em{font-style:italic}
+.hint{position:absolute;right:96px;bottom:96px;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;max-width:1280px;width:100%;margin:0 auto}
+.portrait{aspect-ratio:4/5;display:flex;align-items:flex-end;padding:24px;box-sizing:border-box;color:#352827;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.about-split{grid-template-columns:minmax(380px,34%) 1fr;gap:80px;align-items:center}
+.about-split .portrait{aspect-ratio:9/14;min-height:0;border-radius:6px;padding:0;overflow:hidden}
+.about-panel{background:radial-gradient(900px 520px at 100% 100%,rgba(156,169,200,.28),transparent 70%),radial-gradient(700px 420px at 0% 0%,rgba(204,174,185,.22),transparent 70%),#FDFBF9 !important}
+.pwrap{position:relative;width:100%;max-width:min(400px,calc((100vh - 250px)/1.56));min-width:240px;justify-self:center}
+.pwrap:before{content:"";position:absolute;inset:22px -22px -22px 22px;border:1.5px solid #CCAEB9;border-radius:200px 200px 14px 14px;z-index:0}
+.pwrap:after{content:"";position:absolute;width:150px;height:150px;left:-48px;bottom:36px;border-radius:50%;background:rgba(156,169,200,.45);z-index:0}
+.about-split .pwrap .portrait{position:relative;z-index:1;border-radius:200px 200px 14px 14px;box-shadow:0 30px 60px -28px rgba(53,40,39,.45)}
+.pbadge{position:absolute;z-index:2;right:-34px;bottom:44px;background:#352827;color:#FDFBF9;padding:14px 20px;border-radius:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;line-height:1.7;box-shadow:0 18px 36px -16px rgba(53,40,39,.6)}
+.pbadge b{display:block;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;font-size:22px;letter-spacing:0;text-transform:none;color:#E6CBD5}
+.a-eyebrow{display:flex;align-items:center;gap:16px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:#9a7684;margin:0 0 clamp(10px,2vh,22px)}
+.a-eyebrow:after{content:"";height:1px;width:90px;background:#CCAEB9}
+.about-lead em{font-style:italic;color:#9a7684}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:clamp(14px,2.6vh,28px) 0 0}
+.chips span{padding:6px 14px;white-space:nowrap;border-radius:999px;border:1px solid #CCAEB9;background:rgba(253,251,249,.7);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:#433F46}
+.chips span:nth-child(2){background:#CCAEB9;border-color:#CCAEB9;color:#352827}
+.chips span:nth-child(3){background:#9CA9C8;border-color:#9CA9C8;color:#352827}
+.about-split .facts{gap:16px;flex-wrap:nowrap}
+.about-split .facts>div{width:auto;flex:1 1 0;min-width:0}
+.about-split .facts>div{background:rgba(255,255,255,.65);border:1px solid rgba(204,174,185,.55);border-top:3px solid #CCAEB9;border-radius:10px;padding:clamp(10px,1.8vh,18px) 22px;min-width:0}
+.about-split .facts>div:nth-child(2){border-top-color:#9CA9C8}
+.about-lead{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(22px,3.8vh,40px);line-height:1.3;max-width:900px;color:#352827}
+.about-body{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(15px,2.6vh,28px);line-height:1.45;max-width:900px;margin-top:clamp(14px,2.6vh,32px);color:#352827}
+.about-body2{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(13px,2.2vh,24px);line-height:1.45;max-width:900px;margin-top:clamp(10px,2vh,24px);color:#352827}
+.facts{display:flex;flex-wrap:wrap;gap:64px;margin-top:56px}
+.facts>div{width:220px;border-top:1px solid #9CA9C8;padding-top:16px}
+.fact-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin:0 0 12px;max-width:none}
+.fact-main{font-family:'Instrument Serif',Georgia,serif;font-size:22px;line-height:1.2;margin:0;max-width:none;color:#352827}
+.fact-sub{font-size:12px;line-height:1.5;margin:4px 0 0;max-width:none;color:#433F46}
+.two{display:grid;grid-template-columns:1.3fr 1fr;padding:0;align-items:stretch}
+.xp,.sk{box-sizing:border-box;height:100vh;padding:128px 96px 96px;overflow-y:auto;scrollbar-width:none}
+.xp::-webkit-scrollbar,.sk::-webkit-scrollbar{display:none}
+.xp{background:#433F46;color:#FDFBF9}
+.sk{background:#CCAEB9;color:#352827}
+.xp-title{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:88px;line-height:.98;letter-spacing:-.02em;margin:0 0 56px;color:#FDFBF9}
+.job{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;border-top:1px solid #FDFBF9;padding:20px 0}
+.job:last-child{border-bottom:1px solid #FDFBF9}
+.job h4{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:28px;line-height:1.2;margin:0;color:#FDFBF9}
+.job .org{font-family:'Instrument Serif',Georgia,serif;font-size:20px;line-height:1.3;margin:6px 0 0;max-width:none;color:#9CA9C8}
+.job .when{font-family:'Instrument Serif',Georgia,serif;font-size:20px;white-space:nowrap;color:#CCAEB9}
+.sk-title{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:76px;line-height:1;letter-spacing:-.02em;margin:0 0 48px;color:#352827}
+.sk-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 56px}
+.sk-group h5{font-family:'Inter',system-ui,sans-serif;font-size:16px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid #352827}
+.sk-group ul{list-style:none;margin:0;padding:0}
+.sk-group li{font-family:'Instrument Serif',Georgia,serif;font-size:17px;line-height:1.6;color:#352827}
+.sk{padding-left:64px;padding-right:48px;padding-top:clamp(128px,15vh,160px)}
+.sk-grid{gap:48px 32px}
+.sk-group:last-child{background:#352827;color:#FDFBF9;border-radius:18px;padding:20px 24px 26px;margin-top:-20px;align-self:start}
+.sk-group:last-child h5{font-size:16px;letter-spacing:.06em;padding-bottom:12px;margin-bottom:14px}
+.sk-group:last-child li{font-size:18px}
+.sk-group:last-child h5{border-bottom-color:rgba(253,251,249,.3);color:#E6CBD5}
+.sk-group:last-child li{color:#FDFBF9}
+@media (prefers-reduced-motion:no-preference){@supports (container-type:scroll-state){
+.panel:not(.intro){container-type:scroll-state}
+.panel:not(.intro) :is(.label,.a-eyebrow,.phead,h2,.about-lead,.ctitle,.about-body,.about-body2,.chips,.facts>div,.cinfo>div,.cta,.clinks,.pcue,.job,.sk-group,.pcard,.pwrap,.sk-group li,.chips span,.clinks a,.facts p){opacity:0;translate:0 56px;transition:opacity .35s,translate .35s,transform .4s cubic-bezier(.22,.61,.36,1),background .3s,border-color .3s,box-shadow .45s}
+.panel:not(.intro) .pwrap{translate:-100px 0}
+@container scroll-state(snapped:inline){
+.panel:not(.intro) :is(.label,.a-eyebrow,.phead,h2,.about-lead,.ctitle,.about-body,.about-body2,.chips,.facts>div,.cinfo>div,.cta,.clinks,.pcue,.job,.sk-group,.pcard,.pwrap,.sk-group li,.chips span,.clinks a,.facts p){opacity:1;translate:0 0;transition:opacity 1.3s ease var(--d,0s),translate 1.4s cubic-bezier(.22,.61,.36,1) var(--d,0s),transform .4s cubic-bezier(.22,.61,.36,1),background .3s,border-color .3s,box-shadow .45s}
+.panel :is(.label,.a-eyebrow,.phead){--d:0s}
+.panel :is(h2,.about-lead,.ctitle,.pwrap){--d:.2s}
+.panel :is(.about-body){--d:.5s}
+.panel :is(.about-body2){--d:.7s}
+.panel :is(.chips){--d:.9s}
+.panel .facts>div:nth-child(1){--d:1.1s}
+.panel .facts>div:nth-child(2){--d:1.3s}
+.panel .job:nth-of-type(1){--d:.5s}
+.panel .job:nth-of-type(2){--d:.75s}
+.panel .job:nth-of-type(3){--d:1s}
+.panel .sk-group:nth-child(1){--d:.5s}
+.panel .sk-group:nth-child(2){--d:.7s}
+.panel .sk-group:nth-child(3){--d:.9s}
+.panel .sk-group:nth-child(4){--d:1.1s}
+.panel .pcard:nth-child(1){--d:.3s}
+.panel .pcard:nth-child(2){--d:.5s}
+.panel .pcard:nth-child(3){--d:.7s}
+.panel .pcard:nth-child(4){--d:.9s}
+.panel .pcard:nth-child(5){--d:1.1s}
+.panel .pcue{--d:1.3s}
+.panel .cinfo>div:nth-child(1){--d:.5s}
+.panel .cinfo>div:nth-child(2){--d:.75s}
+.panel .cinfo>div:nth-child(3){--d:1s}
+.panel .sk-group li:nth-child(1){--d:calc(.9s + 1*.12s)}
+.panel .sk-group li:nth-child(2){--d:calc(.9s + 2*.12s)}
+.panel .sk-group li:nth-child(3){--d:calc(.9s + 3*.12s)}
+.panel .sk-group li:nth-child(4){--d:calc(.9s + 4*.12s)}
+.panel .sk-group li:nth-child(5){--d:calc(.9s + 5*.12s)}
+.panel .sk-group li:nth-child(6){--d:calc(.9s + 6*.12s)}
+.panel .sk-group li:nth-child(7){--d:calc(.9s + 7*.12s)}
+.panel .chips span:nth-child(1){--d:calc(.9s + 1*.15s)}
+.panel .chips span:nth-child(2){--d:calc(.9s + 2*.15s)}
+.panel .chips span:nth-child(3){--d:calc(.9s + 3*.15s)}
+.panel .cta{--d:1.25s}
+.panel .clinks{--d:1.45s}
+}
+}}
+.intro .hero{animation:none}
+.intro .ln{display:block}
+@media (prefers-reduced-motion:no-preference){
+.intro .ln{animation:lnUp 1.4s cubic-bezier(.22,.61,.36,1) both}
+.intro .ln:nth-child(1){animation-delay:.25s}
+.intro .ln:nth-child(2){animation-delay:.6s}
+.intro .ln:nth-child(3){animation-delay:.95s}
+.intro .intro-in{animation:introFade 1.2s ease both}
+.intro .label.intro-in{animation-delay:0s}
+.intro .intro-sub{animation-delay:1.5s}
+.intro .hint{animation:introFade 1.2s ease 1.9s both,nudge 2.2s ease-in-out 3.2s infinite}
+@keyframes lnUp{from{opacity:0;translate:0 70px;filter:blur(10px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+@keyframes introFade{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
+@keyframes nudge{50%{translate:14px 0}}
+}
+@media (prefers-reduced-motion:no-preference){
+@keyframes pdTop{from{opacity:0;translate:0 -18px}to{opacity:1;translate:0 0}}
+@keyframes pdRise{from{opacity:0;translate:0 60px;filter:blur(10px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+@keyframes pdFade{from{opacity:0;translate:0 30px}to{opacity:1;translate:0 0}}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .top{animation:pdTop .9s ease .45s both}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .dtitle{animation:pdRise 1.3s cubic-bezier(.22,.61,.36,1) .55s both}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .meta{animation:pdFade 1.1s ease .9s both}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .dbody{animation:pdFade 1.2s ease 1.15s both}
+@supports (animation-timeline:view()){
+@keyframes pdIn{from{opacity:0;translate:0 70px;scale:.97}to{opacity:1;translate:0 0;scale:1}}
+.pd .cshead,.pd .cs>*:not(.gal),.pd .gal>*,.pd .meetfacts>div,.pd .stats>*,.pd .steps>*,.pd .cs-duo>*,.pd .kbwrap,.pd .docpage,.pd .cs-grid2>*,.pd .art{animation:pdIn linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+.pd .gal>*:nth-child(2n){animation-range:entry 8% entry 63%}
+.pd .gal.g3>*:nth-child(3n){animation-range:entry 14% entry 70%}
+}
+}
+@media (prefers-reduced-motion:no-preference){
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .dbody{animation:none}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .dbody :is(p,li,.k,.desc){animation:pdFade 1.1s ease calc(1.0s + var(--i,0)*.12s) both}
+.dbody :is(p,li):nth-child(1){--i:1}
+.dbody :is(p,li):nth-child(2){--i:2}
+.dbody :is(p,li):nth-child(3){--i:3}
+.dbody :is(p,li):nth-child(4){--i:4}
+.dbody :is(p,li):nth-child(5){--i:5}
+.dbody :is(p,li):nth-child(6){--i:6}
+.dbody :is(p,li):nth-child(7){--i:7}
+.dbody :is(p,li):nth-child(8){--i:8}
+.dbody :is(p,li):nth-child(9){--i:9}
+.dbody :is(p,li):nth-child(10){--i:10}
+
+@supports (animation-timeline:view()){
+.pd .case :is(p,li,h4,h5,.lead,.step,.stat,.ph,img,video,.mv,.k,.dt):not(.sheet *):not(.kbwrap *){animation:pdIn linear both;animation-timeline:view();animation-range:entry 0% entry 50%}
+.pd .case li:nth-child(2n){animation-range:entry 6% entry 56%}
+.pd .case li:nth-child(3n){animation-range:entry 12% entry 62%}
+.pd .case p:nth-of-type(2n){animation-range:entry 4% entry 54%}
+}
+}
+@media (prefers-reduced-motion:no-preference){
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .cshead,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .cs-grid2>*,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .gal>*,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .meetfacts>div,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .stats>*,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .steps>*,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .cs-duo>*,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .docpage,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .art,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .phoneframe,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type p,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type li,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type h4,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type h5,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .lead,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .step,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .stat,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .ph,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type img,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type video,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .mv,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .k,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .dt,:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type>*:not(.gal){animation:pdFade 1.2s ease calc(1.1s + var(--i,0)*.14s) both;animation-timeline:auto;animation-range:normal}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type *:nth-child(1){--i:1}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type *:nth-child(2){--i:2}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type *:nth-child(3){--i:3}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type *:nth-child(4){--i:4}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type *:nth-child(5){--i:5}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type *:nth-child(6){--i:6}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type *:nth-child(7){--i:7}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type *:nth-child(8){--i:8}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .svc li:nth-child(1){--i:6}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .svc li:nth-child(2){--i:7}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .svc li:nth-child(3){--i:8}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .svc li:nth-child(4){--i:9}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .svc li:nth-child(5){--i:10}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .svc li:nth-child(6){--i:11}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .svc li:nth-child(7){--i:12}
+:is(#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10,#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10) .case>.cs:first-of-type .svc li:nth-child(8){--i:13}
+}
+.prow{display:flex;flex-wrap:nowrap;gap:24px;overflow-x:auto;padding:16px;margin:-16px;scrollbar-width:none}
+.prow::-webkit-scrollbar{display:none}
+.prow+.prow{margin-top:8px}
+.pcue.pclick{text-align:left;margin:20px 0 0;opacity:.7}
+.pcue{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;text-align:right;margin:0 0 16px;max-width:none;color:#352827}
+.phead{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:0 0 20px;padding-top:0}
+.phead .a-eyebrow{margin:0}
+.phead .pcue{margin:0}
+.pcard,.pcard:hover{border-radius:16px;overflow:hidden;border-color:rgba(204,174,185,.6);box-shadow:0 10px 28px -18px rgba(53,40,39,.35)}
+.pcard:hover{border-color:#CCAEB9;transform:translateY(-8px) scale(1.03);box-shadow:0 28px 48px -20px rgba(53,40,39,.45)}
+.pcard .pimg{position:relative}
+.pcard .pimg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(53,40,39,0) 55%,rgba(53,40,39,.35));pointer-events:none}
+.pcard .pnum{position:absolute;top:14px;left:14px;z-index:2;background:rgba(253,251,249,.92);color:#352827;padding:5px 11px;border-radius:999px;font-weight:600;letter-spacing:.1em;font-size:11px}
+.pcard .parr{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid #CCAEB9;font-size:16px;transition:background .3s,color .3s,transform .4s}
+.pcard:hover .parr{background:#352827;border-color:#352827;color:#E6CBD5;transform:rotate(45deg)}
+.pcard .prow1{gap:12px}
+.pcard .psub{display:flex;align-items:center;gap:8px}
+.pcard .psub:before{content:"";width:8px;height:8px;border-radius:50%;background:#CCAEB9;flex:none}
+.inner>.prow+.prow .psub:before{background:#9CA9C8}
+.pbox{display:block;flex:0 0 409px;height:clamp(220px,34vh,283px);background:#CCAEB9;cursor:pointer}
+.pbox:hover{background:#352827}
+.pcard,.pcard:hover{background:#FDFBF9;border:1px solid #CCAEB9;box-sizing:border-box;display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.22,.61,.36,1),border-color .3s,box-shadow .45s;position:relative}
+.pcard:hover{border-color:#352827;transform:scale(1.07);z-index:3;box-shadow:0 18px 40px rgba(53,40,39,.22)}
+.pcard .pimg{display:block;flex:0 0 68%;background-size:cover;background-position:top center;filter:grayscale(1);transition:filter .5s ease}
+.pcard:hover .pimg{filter:grayscale(0)}
+.pcard .pinfo{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:0 16px;flex:1;font-family:'Inter',system-ui,sans-serif;color:#433F46}
+.pcard .prow1{display:flex;align-items:center;gap:14px}
+.pcard .pnum{font-size:11px;letter-spacing:.04em;color:#9CA9C8}
+.pcard .ptt{flex:1;font-size:22px;line-height:1.2;letter-spacing:-.01em;color:#352827;white-space:nowrap}
+.pcard .parr{font-size:20px;color:#433F46}
+.pcard .psub{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#433F46;opacity:.75;white-space:nowrap}
+.ctitle{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:120px;line-height:.95;letter-spacing:-.02em;color:#FDFBF9;margin:0}
+.ctitle em{font-style:italic}
+.foot{margin-top:clamp(16px,3vh,40px);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.cinfo{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:56px;max-width:900px}
+.cinfo>div{border-top:1px solid #9CA9C8;padding-top:16px}
+.cinfo .k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#CCAEB9;margin:0 0 10px;max-width:none;font-weight:600}
+.cinfo .v{font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.3;margin:0;max-width:none;color:#FDFBF9}
+.clinks{display:flex;gap:40px;margin-top:32px}
+.contact-panel{overflow:hidden;background:radial-gradient(640px 460px at 8% 100%,rgba(204,174,185,.22),transparent 70%),radial-gradient(620px 460px at 100% 0%,rgba(156,169,200,.26),transparent 70%),#352827 !important}
+.contact-panel .a-eyebrow{color:#CCAEB9}
+.contact-panel .a-eyebrow:after{background:#CCAEB9}
+.csplit{align-items:center}
+.ctitle{font-size:clamp(64px,13vh,120px)}
+.cright .cinfo>div{display:flex;align-items:center;gap:18px;padding:clamp(8px,1.5vh,18px) 20px;border:1px solid rgba(204,174,185,.3);border-top:1px solid rgba(204,174,185,.3);border-radius:16px;background:rgba(253,251,249,.05);transition:background .3s,border-color .3s,transform .3s}
+.cright .cinfo>div:hover{background:rgba(253,251,249,.1);border-color:#CCAEB9;transform:translateX(6px)}
+.cright .cinfo{gap:10px}
+.contact-panel{padding-top:104px;padding-bottom:40px}
+.cinfo .v{font-size:clamp(18px,3vh,24px)}
+.cico{flex:none;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#CCAEB9;color:#352827}
+.cinfo>div:nth-child(2) .cico{background:#9CA9C8}
+.cico svg{width:20px;height:20px}
+.cinfo .k{margin:0 0 4px !important}
+.cta{display:inline-flex;align-items:center;gap:14px;margin-top:clamp(14px,2.4vh,28px);padding:13px 26px;border-radius:999px;background:#CCAEB9;color:#352827;font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;transition:background .3s,transform .3s}
+.cta:hover{background:#FDFBF9;transform:translateY(-3px)}
+.cta span{font-size:18px;letter-spacing:0}
+.cright .clinks{margin-top:16px;gap:12px}
+.clinks a{border:1px solid rgba(253,251,249,.4);border-radius:999px;padding:10px 20px;transition:background .3s,color .3s,border-color .3s}
+.clinks a:hover{background:#FDFBF9;color:#352827;border-color:#FDFBF9}
+.clinks a:hover .arr{color:#352827}
+.foot{opacity:.7}
+.csplit .cright{transform:translateY(clamp(20px,6vh,56px))}
+.csplit{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;max-width:1280px}
+.csplit .ctitle{margin:0}
+.cright .cinfo{grid-template-columns:1fr;gap:28px;margin-top:0;max-width:none}
+.cright .clinks{margin-top:40px}
+.clinks a{font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.clinks .arr{color:#CCAEB9;font-size:16px;letter-spacing:0;margin-left:4px}
+.pd{--bg:#352827;--fg:#FDFBF9;--accent:#CCAEB9;--line:#9CA9C8;--video:#CCAEB9;--videofg:#352827;visibility:hidden;opacity:0;transform:translateY(100%);pointer-events:none;transition:transform .7s cubic-bezier(.22,.61,.36,1),opacity .5s ease,visibility 0s linear .7s;position:absolute;inset:0;z-index:20;box-sizing:border-box;background:var(--bg);color:var(--fg);padding:88px 96px 64px;overflow-y:auto}
+.t-graphite{--bg:#433F46;--fg:#FDFBF9;--accent:#CCAEB9;--line:#9CA9C8;--video:#352827;--videofg:#CCAEB9}
+.t-blue{--bg:#9CA9C8;--fg:#352827;--accent:#352827;--line:#352827;--video:#FDFBF9;--videofg:#352827}
+.t-rose{--bg:#CCAEB9;--fg:#352827;--accent:#352827;--line:#352827;--video:#FDFBF9;--videofg:#352827}
+.t-white{--bg:#FDFBF9;--fg:#352827;--accent:#433F46;--line:#352827;--video:#CCAEB9;--videofg:#352827}
+.pd .top{display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.pclose{cursor:pointer;font-size:14px;letter-spacing:.08em;text-transform:none}
+.pd .meta{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:56px;max-width:none}
+.dtitle{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(40px,10.4vw,150px);line-height:1.15;letter-spacing:-.02em;margin:24px 0 56px;padding-top:.08em;white-space:nowrap}
+.dbody{display:grid;grid-template-columns:1.2fr 1fr;gap:96px;align-items:start}
+.dbody .desc{font-size:26px;line-height:1.5;max-width:none}
+.dvideo{aspect-ratio:16/9;background:var(--video);margin-top:48px;display:flex;align-items:center;justify-content:center;color:var(--videofg);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.dinfo>div{border-top:1px solid var(--line);padding:20px 0}
+.dinfo .k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 8px;max-width:none}
+.dinfo .v{font-size:20px;line-height:1.4;margin:0;max-width:none}
+.dinfo .dlinks a{font-size:20px;border-bottom:1px solid currentColor;padding-bottom:4px;margin-right:32px}
+.case{display:flex;flex-direction:column;gap:128px;margin-top:24px}
+.cshead{display:flex;align-items:baseline;gap:20px;border-top:1px solid var(--line);padding-top:28px;margin-bottom:48px}
+.csn{font-size:12px;letter-spacing:.18em;color:var(--accent);font-weight:600}
+.cshead h4{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(36px,4.6vw,68px);line-height:1.15;margin:0;letter-spacing:-.01em}
+.cs .k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;max-width:none;font-weight:600}
+.cs-grid2{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:96px;align-items:start}
+.cs .lead{font-size:22px;line-height:1.55;margin:0;max-width:60ch}
+.svc{list-style:none;margin:48px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:12px}
+.svc li{border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-size:14px;letter-spacing:.04em}
+.ph{background:var(--video);color:var(--videofg);display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:16px;box-sizing:border-box;width:100%}
+.ph.phone{aspect-ratio:9/19}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:0 72px;margin-bottom:56px}
+.step{border-top:1px solid var(--line);padding:24px 0 32px}
+.step .sd{font-size:20px;line-height:1.5;margin:0;max-width:none}
+.gal{display:grid;gap:24px;align-items:start}
+.gal.g2{grid-template-columns:1fr 1fr}
+.gal.g3{grid-template-columns:1fr 1fr 1fr}
+.art{display:block;width:100%;height:auto;border-radius:10px}
+.gal.gwide{grid-template-columns:2fr 1fr}
+.meetfacts{display:flex;gap:96px;flex-wrap:wrap}
+.cs-mascot{display:grid;grid-template-columns:1fr minmax(260px,460px);gap:64px;align-items:center}
+.cs-mascot img{display:block;width:100%;height:auto}
+.cs .mv{font-size:clamp(22px,2.4vw,34px);line-height:1.3;margin:0;max-width:none}
+.stats{display:flex;gap:112px;flex-wrap:wrap}
+.stat .num{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(72px,10vw,160px);line-height:1;margin:0;letter-spacing:-.02em;max-width:none}
+.stat .lbl{font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:16px 0 0;max-width:none}
+.docpage{background:#fff;color:#1c1c1c;border-radius:6px;box-sizing:border-box;width:100%;aspect-ratio:3/4;overflow-y:auto;padding:44px 48px;font-family:'Times New Roman',Times,serif;font-size:15px;line-height:1.75;box-shadow:0 1px 0 rgba(0,0,0,.06),0 12px 32px rgba(53,40,39,.18);scrollbar-width:thin;scrollbar-color:#9CA9C8 transparent}
+.docpage p{margin:0 0 18px;max-width:none}
+.docpage .dt{text-align:center;font-weight:700;font-size:16px;margin:0 0 28px}
+.docpage ul{margin:0 0 18px;padding-left:28px}
+.docpage ul ul{margin:6px 0 0;list-style:circle}
+.docpage li{margin:0 0 6px;max-width:none}
+.docpage a{color:#1a56db;text-decoration:underline}
+.sheet{background:#fff;color:#1c1c1c;border-radius:6px;box-sizing:border-box;width:100%;max-height:680px;overflow:auto;box-shadow:0 10px 30px rgba(0,0,0,.18);scrollbar-width:thin;scrollbar-color:#9CA9C8 transparent}
+.sheet table{border-collapse:collapse;min-width:1040px;width:100%;font-family:'Inter',system-ui,sans-serif;font-size:13px;line-height:1.5;table-layout:fixed}
+.sheet th,.sheet td{border:1px solid #d9d4d0;padding:12px 14px;vertical-align:top;text-align:left}
+.sheet th.rl{position:sticky;left:0;z-index:2;width:130px;background:#8E1B12;color:#fff;font-weight:600;font-size:13px}
+.sheet th.m1{background:#F4D3B5;text-align:center}
+.sheet th.m2{background:#E3A9A6;text-align:center}
+.sheet th.m3{background:#D4806F;text-align:center;color:#fff}
+.sheet th.gd{background:#8E1B12;color:#fff;font-weight:600}
+.sheet ul{margin:0;padding-left:18px}
+.sheet li{margin:0 0 4px}
+.sheet td b{font-weight:600}
+.sheet .sub{margin:8px 0 2px;font-weight:600;color:#8E1B12}
+.kbwrap{border-radius:6px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.kbwrap .sheet{border-radius:0;box-shadow:none;max-height:640px;color:#111}
+.kbwrap .sheet table{min-width:960px;table-layout:auto}
+.kbwrap .sheet table{border-collapse:separate;border-spacing:0}
+.kbwrap .sheet td,.kbwrap .sheet th{border-color:#222;border-width:0 1px 1px 0}
+.kbwrap .sheet tr>*:first-child{border-left:1px solid #222}
+.kbwrap .sheet thead th{position:sticky;top:0;z-index:3;background:#69BAC4;color:#111;font-weight:700;text-align:center;font-size:10px;padding-left:2px;padding-right:2px}
+.kbwrap .sheet .ttl th{background:#ED772F;color:#111;text-align:center;font-size:17px;line-height:1.5;letter-spacing:.06em;height:96px;box-sizing:border-box;padding:0 14px;vertical-align:middle;top:0;z-index:4}
+.kbwrap .sheet .hdr th{top:96px;z-index:3}
+.kbwrap .sheet .stt{text-align:center;font-weight:600;font-size:12px;width:32px;min-width:32px;max-width:32px;padding:12px 0}
+.kbwrap .sheet .dur{text-align:center;font-size:11px;width:34px;min-width:34px;max-width:34px;padding:12px 0}
+.kbwrap .sheet td p{margin:0 0 6px;font-size:13px;line-height:1.55;max-width:none}
+.kbwrap .sheet td p:last-child{margin:0}
+.kbwrap .sheet tfoot td{background:#F4EEF0;font-weight:700;text-align:center}
+.kbwrap .sheet.uni table{min-width:1280px}
+.kbwrap .sheet.uni thead th{font-size:12px;padding:10px 6px}
+.kbwrap .sheet.uni .ttl th{font-size:17px;padding:0 14px}
+.kbwrap .sheet.uni .hdr th{top:96px}
+.kbwrap .sheet.uni .ttl th,.kbwrap .sheet.uni .hdr th{background:#EDCDCE}
+.kbwrap .sheet.uni .stt{width:44px;min-width:44px;max-width:44px;padding:12px 0}
+.kbwrap .sheet.uni .dur{width:60px;min-width:60px;max-width:60px;padding:12px 4px;line-height:1.3}
+.kbwrap .sheet.uni .cs1{text-align:center;padding:12px 6px}
+.kbwrap .sheet.uni .pl{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;color:#222}
+.kbwrap .sheet.uni td p{font-size:13px}
+.kbwrap .sheet.uni tr.sec td{background:#F3D6C2;font-weight:700;font-size:13px;letter-spacing:.04em;text-align:left;padding:10px 14px}
+.cs-duo{display:grid;grid-template-columns:minmax(240px,340px) 1fr;gap:64px;align-items:start}
+.cs-duo .cs{margin:0}
+.kbtabs{display:flex;align-items:center;gap:4px;background:#F8F9FA;border-top:1px solid #d9d4d0;font-family:'Inter',system-ui,sans-serif;font-size:13px;font-weight:600}
+.kbtabs .on{background:#DDE3EA;color:#2B54C9;padding:12px 24px}
+.kbtabs a{color:#444;padding:12px 24px}
+.docframe{display:block;width:100%;aspect-ratio:3/4;border:0;border-radius:10px;background:#fff}
+.pitem{display:flex;flex-direction:column;gap:16px}
+.cslink{font-family:'Instrument Serif',Georgia,serif;font-size:32px;line-height:1.2;text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:2px;color:var(--fg)}
+.hint2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:28px 0 0;color:var(--accent);max-width:none}
+.tone{display:flex;align-items:center;gap:40px;margin-bottom:40px;flex-wrap:wrap}
+.swatches{display:flex;gap:20px}
+.swatches span{width:64px;height:64px;border-radius:50%;display:block;border:1px solid rgba(253,251,249,.25)}
+.dnav{display:flex;justify-content:space-between;margin-top:72px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.pnav{cursor:pointer}
+@keyframes enterRight{from{transform:translateX(100%)}to{transform:translateX(0)}}
+#x01:checked ~ #pd01,#x02:checked ~ #pd02,#x03:checked ~ #pd03,#x04:checked ~ #pd04,#x05:checked ~ #pd05,#x06:checked ~ #pd06,#x07:checked ~ #pd07,#x08:checked ~ #pd08,#x09:checked ~ #pd09,#x10:checked ~ #pd10{visibility:visible;opacity:1;transform:none;pointer-events:auto;transition:none;animation:enterRight .7s cubic-bezier(.22,.61,.36,1)}
+#p01:checked ~ #pd01,#p02:checked ~ #pd02,#p03:checked ~ #pd03,#p04:checked ~ #pd04,#p05:checked ~ #pd05,#p06:checked ~ #pd06,#p07:checked ~ #pd07,#p08:checked ~ #pd08,#p09:checked ~ #pd09,#p10:checked ~ #pd10{visibility:visible;opacity:1;transform:translateY(0);pointer-events:auto;transition:transform .7s cubic-bezier(.22,.61,.36,1),opacity .5s ease,visibility 0s}
+@media (max-width:900px){
+.nav{padding:0 24px}
+.nav ul{gap:16px}
+.nav a{font-size:11px}
+.brand{display:none}
+.panel{padding:120px 28px 56px}
+.hero{font-size:72px}
+.hero-art{display:none}
+h2{font-size:38px}
+.ctitle{font-size:56px}
+.split{grid-template-columns:1fr;gap:32px}
+.about-split{grid-template-columns:1fr}
+.about-split .portrait{aspect-ratio:3/4;min-height:0;max-width:420px}
+.hint{display:none}
+.two{grid-template-columns:1fr}
+.xp,.sk{height:auto;padding:120px 28px 56px}
+.xp-title{font-size:56px}
+.sk-title{font-size:44px}
+.sk-grid{grid-template-columns:1fr}
+.job{flex-direction:column;gap:8px}
+.pbox{flex-basis:78vw;height:auto;aspect-ratio:409/283}
+.pd{padding:96px 28px 48px}
+.cinfo{grid-template-columns:1fr}
+.csplit{grid-template-columns:1fr;gap:40px}
+.csplit .cright{transform:none}
+.dtitle{font-size:clamp(36px,11vw,52px);white-space:normal}
+.dbody{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:900px){.case{gap:80px}.stats,.meetfacts{gap:48px}.cs-duo,.cs-mascot,.cs-grid2,.steps,.gal.g2,.gal.g3,.gal.gwide{grid-template-columns:1fr}.cs-grid2,.cs-mascot,.cs-duo{gap:80px}.ph.phone{max-width:260px}.cs .lead{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="site">
+  <input type="radio" name="proj" id="pnone" class="pt" checked="">
+  <input type="radio" name="proj" id="p01" class="pt">
+  <input type="radio" name="proj" id="p02" class="pt">
+  <input type="radio" name="proj" id="p03" class="pt">
+  <input type="radio" name="proj" id="p04" class="pt">
+  <input type="radio" name="proj" id="p05" class="pt">
+  <input type="radio" name="proj" id="p06" class="pt">
+  <input type="radio" name="proj" id="p07" class="pt">
+  <input type="radio" name="proj" id="p08" class="pt">
+  <input type="radio" name="proj" id="p09" class="pt">
+  <input type="radio" name="proj" id="p10" class="pt">
+  <input type="radio" name="proj" id="x01" class="pt">
+  <input type="radio" name="proj" id="x02" class="pt">
+  <input type="radio" name="proj" id="x03" class="pt">
+  <input type="radio" name="proj" id="x04" class="pt">
+  <input type="radio" name="proj" id="x05" class="pt">
+  <input type="radio" name="proj" id="x06" class="pt">
+  <input type="radio" name="proj" id="x07" class="pt">
+  <input type="radio" name="proj" id="x08" class="pt">
+  <input type="radio" name="proj" id="x09" class="pt">
+  <input type="radio" name="proj" id="x10" class="pt">
+
+  <nav class="nav">
+    <span class="brand">NGỌC BÍCH / PORTFOLIO</span>
+    <ul>
+      <li><a href="#about" data-go="about">Self-introduction</a></li>
+      <li><a href="#experience" data-go="experience">Experience</a></li>
+      <li><a href="#skills" data-go="skills">Skills and Tools</a></li>
+      <li><a href="#work" data-go="work">Projects</a></li>
+      <li><a href="#contact" data-go="contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="track">
+
+    <section class="panel intro" id="intro">
+      <div class="inner">
+        <p class="label intro-in" style="color:#CCAEB9">Portfolio — 2026</p>
+        <h1 class="hero"><span class="ln">welcome to</span><em class="ln" style="color:#CCAEB9">my</em><span class="ln">Portfolio</span></h1>
+        <p class="intro-in intro-sub" style="margin-top:40px;color:#FDFBF9">I create communication that brings together <em style="color:#CCAEB9;font-family:'Instrument Serif',Georgia,serif;font-size:1.3em;font-style:italic">strategy, creativity</em> and meaningful human connection.</p>
+      </div>
+      <span class="hint" style="color:#CCAEB9">Scroll sideways →</span>
+    </section>
+
+    <section class="panel about-panel" id="about" style="color:#433F46">
+      <div class="split about-split">
+        <div class="pwrap"><div class="portrait" style="padding:0;overflow:hidden;background:none"><img src="assets/2d4d8d60ac651ec834509d1c3769adad.jpg" alt="Ảnh chân dung Phan Thị Ngọc Bích" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></div><div class="pbadge">Multimedia<b>Communications</b>Graduate</div></div>
+        <div>
+          <p class="a-eyebrow">01 — Self-introduction</p>
+          <p class="about-lead">I’m Phan Thi Ngoc Bich, a <em>Multimedia Communications graduate</em> with a strong passion for the communications industry.</p>
+          <p class="about-body">I enjoy combining creativity, communication, and organization to turn ideas into meaningful results. I’m eager to learn, embrace new challenges, and grow personally and professionally.</p>
+          <p class="about-body2">With a proactive mindset, a strong sense of responsibility, and the ability to adapt quickly, I strive to contribute meaningful value in every role.</p>
+          <div class="chips"><span>Creativity</span><span>Communication</span><span>Organization</span></div>
+          <div class="facts" style="margin-top:clamp(16px,2.8vh,32px)">
+            <div>
+              <p class="fact-label">Education</p>
+              <p class="fact-main">Van Lang University</p>
+              <p class="fact-sub">Multimedia Communication</p>
+              <p class="fact-sub">GPA 3.2/4 — Very Good</p>
+            </div>
+            <div>
+              <p class="fact-label">Languages</p>
+              <p class="fact-main">APTIS ESOL B2</p>
+              <p class="fact-sub">British Council</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel two" id="experience-skills">
+      <div class="xp" id="experience">
+        <p class="label">02 — Experience</p>
+        <h2 class="xp-title">Learning.<br>Doing.<br>Connecting.</h2>
+        <div class="job">
+          <div>
+            <h4>Marketing &amp; Events</h4>
+            <p class="org">SINASEAN Vietnam</p>
+          </div>
+          <span class="when">9.2025 – 02.2026</span>
+        </div>
+        <div class="job">
+          <div>
+            <h4>Project Team Lead</h4>
+            <p class="org">Van Lang University</p>
+          </div>
+          <span class="when">10.2022 – 04.2026</span>
+        </div>
+        <div class="job">
+          <div>
+            <h4>Page Admin</h4>
+            <p class="org">Chau Van Liem Confession</p>
+          </div>
+          <span class="when">01.2021 – 05.2022</span>
+        </div>
+      </div>
+      <div class="sk" id="skills">
+        <p class="label">03 — Skills &amp; Tools</p>
+        <h2 class="sk-title">A practical<br>creative toolkit.</h2>
+        <div class="sk-grid">
+          <div class="sk-group">
+            <h5>Content</h5>
+            <ul>
+              <li>Content planning</li>
+              <li>Social media &amp; PR</li>
+              <li>copywriting</li>
+              <li>Scriptwriting</li>
+              <li>AI image / audio generation</li>
+            </ul>
+          </div>
+          <div class="sk-group">
+            <h5>Marketing</h5>
+            <ul>
+              <li>Market research</li>
+              <li>Communication planning</li>
+              <li>Project coordination</li>
+            </ul>
+          </div>
+          <div class="sk-group">
+            <h5>Collaboration</h5>
+            <ul>
+              <li>Communication &amp; teamwork</li>
+              <li>Time management</li>
+              <li>Proactive mindset</li>
+              <li>Adaptability</li>
+            </ul>
+          </div>
+          <div class="sk-group">
+            <h5>Tools I work with</h5>
+            <ul>
+              <li>MS Office</li>
+              <li>Canva / Adobe Illustrator / CapCut</li>
+              <li>Figma</li>
+              <li>ChatGPT / Gemini / Suno</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="work" style="background:#FDFBF9;color:#352827;padding-top:108px;padding-bottom:0">
+      <div class="inner">
+        <div class="phead"><p class="a-eyebrow">04 — Projects</p><p class="pcue">Scroll sideways to see more projects</p></div>
+        <div class="prow">
+          <label for="p01" class="pbox pcard"><span class="pimg" style="background-image:url(assets/01383e1e5b844fda8b8c2154fd63ada8.jpg)"></span><span class="pinfo"><span class="prow1"><span class="pnum">01</span><span class="ptt">PR &amp; Communications</span><span class="parr">↗</span></span><span class="psub">Professional / SINASEAN Vietnam</span></span></label>
+          <label for="p02" class="pbox pcard"><span class="pimg" style="background-image:url(assets/6b8f21553810d1ff6883fc2eea0a374e.jpg)"></span><span class="pinfo"><span class="prow1"><span class="pnum">02</span><span class="ptt">WESTWORLD Buyer Visit</span><span class="parr">↗</span></span><span class="psub">Professional / SINASEAN Event</span></span></label>
+          <label for="p03" class="pbox pcard"><span class="pimg" style="background-image:url(assets/79927e68906c26fe65dbf6672cd0a13e.jpg)"></span><span class="pinfo"><span class="prow1"><span class="pnum">03</span><span class="ptt">DSP Showcase</span><span class="parr">↗</span></span><span class="psub">Professional / SINASEAN Event</span></span></label>
+          <label for="p04" class="pbox pcard"><span class="pimg" style="background-image:url(assets/3b6682a1a3d7bb7e84deb94ff92db5e2.jpg);background-position:center 40%"></span><span class="pinfo"><span class="prow1"><span class="pnum">04</span><span class="ptt" style="font-size:18px">SEOUL–HCMC Trade Delegation</span><span class="parr">↗</span></span><span class="psub">Professional / SINASEAN Event</span></span></label>
+          <label for="p05" class="pbox pcard"><span class="pimg" style="background-image:url(assets/f33458109b7dca755c936d6fbea0316d.jpg);background-position:center 55%"></span><span class="pinfo"><span class="prow1"><span class="pnum">05</span><span class="ptt" style="font-size:18px">Binggrae Pop-up Activation</span><span class="parr">↗</span></span><span class="psub">Professional / SINASEAN Event</span></span></label>
+        </div>
+        <div class="prow">
+          <label for="p06" class="pbox pcard"><span class="pimg" style="background-image:url(assets/46f608a943c8aa2bd0ee2c32a55780f3.jpg);background-position:center 55%"></span><span class="pinfo"><span class="prow1"><span class="pnum">06</span><span class="ptt" style="font-size:16px">Bật Niềm Vui — “Free” Giới Hạn</span><span class="parr">↗</span></span><span class="psub">Academic / Pepsi IMC Concept</span></span></label>
+          <label for="p07" class="pbox pcard"><span class="pimg" style="background-image:url(assets/2c8825af764771a95615bf63ae52edbe.jpg);background-position:center 45%"></span><span class="pinfo"><span class="prow1"><span class="pnum">07</span><span class="ptt">MV Lý Kéo Chài</span><span class="parr">↗</span></span><span class="psub">Academic / Music Video / Production</span></span></label>
+          <label for="p08" class="pbox pcard"><span class="pimg" style="background-image:url(assets/9ecd2368ffcf4cca52b087e49dfe2a7b.jpg);background-position:center"></span><span class="pinfo"><span class="prow1"><span class="pnum">08</span><span class="ptt">Unicorn KPI</span><span class="parr">↗</span></span><span class="psub">Academic / Animation Production</span></span></label>
+          <label for="p09" class="pbox pcard"><span class="pimg" style="background-image:url(assets/055840418d5ffcf896cafa2bdb3c69c3.jpg);background-position:center"></span><span class="pinfo"><span class="prow1"><span class="pnum">09</span><span class="ptt">Bánh Mì 1-0-2</span><span class="parr">↗</span></span><span class="psub">Academic / Artificial Intelligence</span></span></label>
+          <label for="p10" class="pbox pcard"><span class="pimg" style="background-image:url(assets/7125361caa8203776cf61d6c26e54080.jpg);background-position:center"></span><span class="pinfo"><span class="prow1"><span class="pnum">10</span><span class="ptt" style="font-size:18px">Châu Văn Liêm Confession</span><span class="parr">↗</span></span><span class="psub">Community / Page Management</span></span></label>
+        </div>
+        <p class="pcue pclick">Click a project to see more</p>
+      </div>
+    </section>
+
+    <section class="panel contact-panel" id="contact" style="color:#FDFBF9">
+      <div class="inner">
+        <p class="a-eyebrow">05 — Contact</p>
+        <div class="csplit">
+        <h2 class="ctitle">Let’s make<br><em style="color:#CCAEB9">something</em><br><span style="color:#9CA9C8">good.</span></h2>
+        <div class="cright">
+        <div class="cinfo">
+          <div><span class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><div><p class="k">Address</p><p class="v">Ho Chi Minh City</p></div></div>
+          <div><span class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M3.5 7l8.5 6 8.5-6"></path></svg></span><div><p class="k">Email</p><p class="v"><a href="https://mail.google.com/mail/?view=cm&amp;to=ngbich.wrk@gmail.com" target="_blank" rel="noopener">ngbich.wrk@gmail.com</a></p></div></div>
+          <div><span class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg></span><div><p class="k">Phone</p><p class="v"><a href="tel:+84934173910">(+84) 934 173 910</a></p></div></div>
+        </div>
+        <a class="cta" href="https://mail.google.com/mail/?view=cm&amp;to=ngbich.wrk@gmail.com" target="_blank" rel="noopener">Say hello <span>↗</span></a>
+        <div class="clinks">
+          <a href="https://www.facebook.com/ngocbichnee/?locale=vi_VN" target="_blank" rel="noopener">Facebook <span class="arr">↗</span></a>
+          <a href="https://www.linkedin.com/in/ngbichh?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_ios" target="_blank" rel="noopener">LinkedIn <span class="arr">↗</span></a>
+        </div>
+        </div>
+        </div>
+        <p class="foot">© 2026 Ngọc Bích</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="pd t-graphite" id="pd01">
+    <div class="top"><span>01 / 10</span><label for="pnone" class="pclose">Close ✕</label></div>
+    <h3 class="dtitle" style="font-family:'Inter',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(36px,7.5vw,110px);margin:56px 0 0">PR &amp; Communications</h3>
+    <p class="meta" style="font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:clamp(14px,1.6vw,24px);letter-spacing:.12em;margin:24px 0 56px">Professional / SINASEAN Vietnam</p>
+    <div class="case">
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">01</span><h4>Overview</h4></div>
+        <div class="cs-grid2">
+          <div class="phoneframe" style="position:relative;max-width:340px;width:100%;align-self:start;padding:12px;border-radius:46px;background:#141414;box-shadow:0 0 0 2px #3a3a3c,0 24px 60px rgba(0,0,0,.45)">
+            <span aria-hidden="true" style="position:absolute;left:50%;top:20px;width:84px;height:22px;margin-left:-42px;border-radius:12px;background:#000;z-index:2"></span>
+            <img src="assets/18fc7b7b5822c39165538cd14a7da9ac.jpg" alt="Trang Facebook SinAsean VN" style="display:block;width:100%;border-radius:34px;background:#fff">
+          </div>
+          <div class="cs-text">
+            <p class="k">About SINASEAN Vietnam</p>
+            <p class="lead"><strong>SINASEAN Vietnam</strong> is a business networking organization connecting Korea and ASEAN. The company provides trade promotion solutions, organizes B2B events, and supports businesses in expanding their professional networks and partnerships.</p>
+            <p class="k" style="margin-top:48px">Role Overview</p>
+            <p class="lead">Support the planning and execution of Marketing and PR activities to promote events, develop communication content, generate potential leads, and connect businesses through B2B networking programs.</p>
+            <ul class="svc">
+              <li>Content Planning</li>
+              <li>Social Media Content</li>
+              <li>Marketing Collateral Design</li>
+              <li>Performance Monitoring</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">02</span><h4>Copywriting</h4></div>
+        <div class="steps">
+          <div class="step"><p class="k">1 — Attention-Grabbing Hook</p><p class="sd">Open a loop in the very first line. One bold, curious headline that makes the scroll stop and the reader need the answer.</p></div>
+          <div class="step"><p class="k">2 — Content Development</p><p class="sd">Write to one reader, not a crowd. Name who it’s for, then earn trust with proof: real names, real numbers, real places.</p></div>
+          <div class="step"><p class="k">3 — Clear Value Proposition</p><p class="sd">Lead with what they gain, never what we offer. Every benefit is concrete, short and easy to scan, so saying yes feels obvious.</p></div>
+          <div class="step"><p class="k">4 — Soft Call to Action</p><p class="sd">Invite, don’t push. One clear next step with a friendly nudge, so the reader acts because they want to, not because they’re told to.</p></div>
+        </div>
+        <div class="gal g2">
+          <img class="art" src="assets/cbd124d49a57d73e02f198ef39803e38.png" alt="Bài đăng Facebook SinAsean VN: Phiên 1 sự kiện ra mắt nhà máy DSP">
+          <img class="art" src="assets/e88e2cc904f00825d79e27edf6ccbe07.png" alt="Bài đăng Facebook SinAsean VN: chỉ 1 bước đăng ký nhận combo quà cao cấp">
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">03</span><h4>Design</h4></div>
+        <div class="tone">
+          <p class="k" style="margin:0">Tone and Mood</p>
+          <div class="swatches">
+            <span style="background:#5C1010"></span>
+            <span style="background:#6E2227"></span>
+            <span style="background:#1F6B2E"></span>
+            <span style="background:#C9A45C"></span>
+          </div>
+        </div>
+        <div class="gal gwide">
+          <img class="art" src="assets/cafd9c254c189f0ab09bdbc44a961fdf.jpg" alt="DSP Launch 2025 banner">
+          <img class="art" src="assets/5b0a4c0be6dd0b15100703285e811e98.jpg" alt="Tham dự miễn phí: Sự kiện ra mắt nhà máy DSP 2025">
+        </div>
+        <div class="gal g2" style="margin-top:24px">
+          <img class="art" src="assets/dfab37882900bd74a773f526584fe716.jpg" alt="Sự kiện ra mắt nhà máy DSP: Phiên 1 và Phiên 2">
+          <img class="art" src="assets/89b09b78e95789f800e4ed4331c4b478.jpg" alt="Sự kiện ra mắt nhà máy DSP: trải nghiệm sản phẩm inox">
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">04</span><h4>Social Media Post</h4></div>
+        <div class="gal g3">
+          <div class="pitem"><a href="https://www.facebook.com/sinasean.vn/posts/pfbid0jJzMW7ComovLgAfhyPwMgq3GHHFFNzLh5Kk5XDhs1kEp32VcMgyscvoFun5dmPipl" target="_blank" rel="noopener"><img class="art" src="assets/26e7325692d9c3764cd063619fc383d0.png" alt="Bài đăng Facebook SinAsean VN: Phiên 1, sự kiện ra mắt nhà máy DSP"></a><a class="cslink" href="https://www.facebook.com/sinasean.vn/posts/pfbid0jJzMW7ComovLgAfhyPwMgq3GHHFFNzLh5Kk5XDhs1kEp32VcMgyscvoFun5dmPipl" target="_blank" rel="noopener">DSP ↗</a></div>
+          <div class="pitem"><a href="https://www.facebook.com/sinasean.vn/posts/pfbid0cSUw5opHzMGc5agLdvPZujY2nxSeva8iCgLh9HHsaJeYKuppMgVFxtUEas6HTtejl" target="_blank" rel="noopener"><img class="art" src="assets/c9dca4d560b8a5bd075e81da17bb0d9e.png" alt="Bài đăng Facebook SinAsean VN: Phiên 2, vật liệu inox cao cấp cho công trình và kiến trúc"></a><a class="cslink" href="https://www.facebook.com/sinasean.vn/posts/pfbid0cSUw5opHzMGc5agLdvPZujY2nxSeva8iCgLh9HHsaJeYKuppMgVFxtUEas6HTtejl" target="_blank" rel="noopener">DSP ↗</a></div>
+          <div class="pitem"><a href="https://www.facebook.com/sinasean.vn/posts/pfbid0spHu4nyu4E2XMhAL1ed4tq52JyMFEneFYFvFcUW7j37cD8Z3HHTHcaCwWozuJ6wml" target="_blank" rel="noopener"><img class="art" src="assets/00465df842f7ea05a38a8a13d25c6fea.png" alt="Bài đăng Facebook SinAsean VN: chỉ 1 bước đăng ký nhận combo quà cao cấp cùng DSP"></a><a class="cslink" href="https://www.facebook.com/sinasean.vn/posts/pfbid0spHu4nyu4E2XMhAL1ed4tq52JyMFEneFYFvFcUW7j37cD8Z3HHTHcaCwWozuJ6wml" target="_blank" rel="noopener">DSP ↗</a></div>
+        </div>
+        <div class="gal g3" style="margin-top:56px">
+          <div class="pitem"><a href="https://www.facebook.com/sinasean.vn/posts/pfbid02LXseFDGyrUSjyRArRx1Ew4EZXTx7ASTqFpt8pD1XiM5D1VSfgP1oHX6uDB7oiMLbl" target="_blank" rel="noopener"><img class="art" src="assets/940ac7026466e47b2bc3ea1f37c12c83.png" alt="Bài đăng Facebook SinAsean VN: 4 bước để kết nối và tăng doanh số cùng 30 doanh nghiệp KWBIZ Hàn Quốc"></a><a class="cslink" href="https://www.facebook.com/sinasean.vn/posts/pfbid02LXseFDGyrUSjyRArRx1Ew4EZXTx7ASTqFpt8pD1XiM5D1VSfgP1oHX6uDB7oiMLbl" target="_blank" rel="noopener">KWBIZZ ↗</a></div>
+          <div class="pitem"><a href="https://www.facebook.com/sinasean.vn/posts/pfbid0VfYXkcHBiVw6kAeF6NEBRED5qxfbPZq1oqTKnoYDgwdT9qmyJQKUQskY8rcRzTRRl" target="_blank" rel="noopener"><img class="art" src="assets/37853c992e27fa4d334d120a9992b26d.png" alt="Bài đăng Facebook SinAsean VN: kết nối và đổi mới đa ngành cùng 30 doanh nghiệp KWBIZ Hàn Quốc"></a><a class="cslink" href="https://www.facebook.com/sinasean.vn/posts/pfbid0VfYXkcHBiVw6kAeF6NEBRED5qxfbPZq1oqTKnoYDgwdT9qmyJQKUQskY8rcRzTRRl" target="_blank" rel="noopener">KWBIZZ ↗</a></div>
+        </div>
+        <p class="hint2">Click on the image or title to view details.</p>
+      </section>
+
+    </div>
+    <div class="dnav"><span></span><label for="x02" class="pnav">Next project →</label></div>
+  </div>
+
+  <div class="pd t-blue" id="pd02">
+    <div class="top"><span>02 / 10</span><label for="pnone" class="pclose">Close ✕</label></div>
+    <h3 class="dtitle" style="font-family:'Inter',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(36px,7.5vw,110px);margin:56px 0 0">WESTWORLD Buyer Visit</h3>
+    <p class="meta" style="font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:clamp(14px,1.6vw,24px);letter-spacing:.12em;margin:24px 0 56px">Professional / SINASEAN Event</p>
+    <div class="dbody" style="grid-template-columns:1fr">
+      <div>
+        <p class="desc">Connecting WESTWORLD VFX, a leading Korean visual-effects studio, with Vietnamese film directors and producers to open doors for co-production and VFX partnerships.</p>
+        <p class="k" style="margin:32px 0 12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600">Hit titles from WESTWORLD</p>
+        <ul class="svc" style="margin:0">
+          <li>Squid Game</li>
+          <li>Exhuma</li>
+          <li>Queen of Tears</li>
+          <li>The Glory</li>
+          <li>Extraordinary Attorney Woo</li>
+          <li>All of Us Are Dead</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case" style="margin-top:128px">
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">01</span><h4>Meeting B2B WESTWORLD</h4></div>
+        <div class="meetfacts">
+          <div><p class="k">Date</p><p class="mv">18, 19 / 11 / 2025</p></div>
+          <div><p class="k">Location</p><p class="mv">Buyer Visit</p></div>
+        </div>
+        <div class="gal g2" style="margin-top:56px">
+          <div class="pitem"><a class="k" href="https://docs.google.com/document/d/12EvO577sGcGrjLGUcNOpNwmIBPX9h7gD74RNzF64Nv4/edit?tab=t.0" target="_blank" rel="noopener" style="margin:0;align-self:flex-start;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px">Email Marketing ↗</a><div class="docpage" tabindex="0" aria-label="Email marketing: thư mời gặp mặt WESTWORLD VFX">
+            <p class="dt">THƯ MỜI GẶP MẶT | … – WESTWORLD VFX (Hàn Quốc)</p>
+            <p>Kính gửi…,</p>
+            <p>Trước hết, Sinasean Việt Nam xin trân trọng gửi lời chào và lời cảm ơn đến Quý Công ty đã luôn đồng hành cùng các hoạt động phát triển ngành công nghiệp điện ảnh Việt Nam – Hàn Quốc.</p>
+            <p>Chúng tôi xin được giới thiệu <b>Công ty WESTWORLD VFX</b>, một đơn vị hàng đầu tại Hàn Quốc chuyên về sản xuất kỹ xảo hậu kỳ phim (VFX). WESTWORLD đã thực hiện hậu kỳ cho nhiều dự án phim lớn, trong đó có <i>Squid Game</i> cùng nhiều tác phẩm điện ảnh nổi tiếng khác. Hiện nay, công ty đã thành lập pháp nhân tại Việt Nam và mong muốn hợp tác sâu rộng với các đối tác trong lĩnh vực sản xuất và phát hành phim.</p>
+            <p><b>Website giới thiệu:</b> <a href="https://www.westworld.co.kr/en/" target="_blank" rel="noopener">https://www.westworld.co.kr/en/</a></p>
+            <p>Năm 2025 WESTWORLD phát triển mở rộng tại thị trường Việt Nam, WESTWORLD rất kỳ vọng và kính đề nghị được sắp xếp một buổi <b>gặp gỡ B2B trực tiếp</b> để giới thiệu về năng lực, chia sẻ định hướng hợp tác và tìm hiểu cơ hội đồng hành cùng …. trong các dự án phim có yếu tố kỹ xảo cao.</p>
+            <p><b>Thông tin đề xuất buổi gặp:</b></p>
+            <ul>
+              <li><b>Thời gian:</b> Ngày … tháng 11 năm 2025</li>
+              <li><b>Địa điểm:</b> Theo lịch và địa điểm thuận tiện do Quý Công ty đề xuất</li>
+              <li><b>Thành phần tham dự:</b>
+                <ul>
+                  <li>Đại diện WESTWORLD Hàn Quốc (CEO và Giám đốc đại diện tại Việt Nam)</li>
+                  <li>Đại diện Sinasean Việt Nam (đơn vị hỗ trợ B2B chương trình WESTWORLD Vietnam 2025)</li>
+                  <li>Phiên dịch Hàn – Anh – Việt</li>
+                </ul>
+              </li>
+            </ul>
+            <p>Buổi làm việc dự kiến kéo dài khoảng <b>45–60 phút</b>, tập trung giới thiệu:</p>
+            <ul>
+              <li>Năng lực và dự án tiêu biểu của WESTWORLD VFX;</li>
+            </ul>
+          </div></div>
+          <div class="pitem"><p class="k" style="margin:0">Invitation Letter</p><img class="art" src="assets/e66c802b7329c8bfbfc8258c175fa1a5.jpg" alt="Thư xác nhận gặp mặt của WESTWORLD VFX" style="width:100%;height:auto"></div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">02</span><h4>My Contributions</h4></div>
+        <ul class="svc" style="margin:0">
+          <li>Partner Sourcing &amp; Development</li>
+          <li>Buyer Visit &amp; B2B Event Coordination</li>
+          <li>Invitation &amp; Business Communication Materials</li>
+          <li>Schedule Coordination &amp; Stakeholder Management</li>
+        </ul>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">03</span><h4>Results</h4></div>
+        <div class="stats">
+          <div class="stat"><p class="num">9</p><p class="lbl">Business Visits &amp; B2B Meetings</p></div>
+          <div class="stat"><p class="num">93%</p><p class="lbl">Satisfaction Rate</p></div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">04</span><h4>Gallery</h4></div>
+        <div class="gal g2">
+          <img class="art" src="assets/cb2f3c18c426f379b12dd42ea62b2381.jpg" alt="Buổi gặp mặt tại Đại học Văn Lang" style="aspect-ratio:3/2;object-fit:cover;width:100%">
+          <img class="art" src="assets/dbcda19191ae63018ccae75d9f996783.jpg" alt="Gặp mặt tại không gian trưng bày poster phim" style="aspect-ratio:3/2;object-fit:cover;width:100%">
+          <img class="art" src="assets/273cfa00f3a4af958d63497ce2497ae6.jpg" alt="Buổi làm việc và thuyết trình về ngành điện ảnh Việt Nam" style="aspect-ratio:3/2;object-fit:cover;width:100%">
+          <img class="art" src="assets/a0568aca8131c20c9d483b046d196cb3.jpg" alt="Tham quan phòng chiếu phim" style="aspect-ratio:3/2;object-fit:cover;width:100%">
+        </div>
+      </section>
+
+    </div>
+    <div class="dnav"><label for="x01" class="pnav">← Previous project</label><label for="x03" class="pnav">Next project →</label></div>
+  </div>
+
+  <div class="pd t-rose" id="pd03">
+    <div class="top"><span>03 / 10</span><label for="pnone" class="pclose">Close ✕</label></div>
+    <h3 class="dtitle" style="font-family:'Inter',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(36px,7.5vw,110px);margin:56px 0 0">DSP Showcase</h3>
+    <p class="meta" style="font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:clamp(14px,1.6vw,24px);letter-spacing:.12em;margin:24px 0 56px">Professional / SINASEAN Event</p>
+    <div class="dbody" style="grid-template-columns:1fr">
+      <div>
+        <p class="desc">A B2B/B2C networking showcase for DSP (Design Stainless-Steel Product), bringing the new Vietnam factory launch to potential clients and partners in one event.</p>
+      </div>
+    </div>
+    <div class="case" style="margin-top:128px">
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">01</span><h4>B2B/B2C Showcase</h4></div>
+        <div class="meetfacts">
+          <div><p class="k">Date</p><p class="mv">28 / 10 / 2025</p></div>
+          <div><p class="k">Location</p><p class="mv">Riverside Hotel</p></div>
+        </div>
+        <div class="gal g3" style="margin-top:56px">
+          <img class="art" src="assets/fbb1e1653e567a1ffb55225a0c037f2b.jpg" alt="Khách mời tham quan khu trưng bày sản phẩm DSP">
+          <img class="art" src="assets/4021142bd2dd7b183f25f35fc92b8beb.jpg" alt="Khách mời phát biểu và trao đổi tại sự kiện">
+          <img class="art" src="assets/08d224a4de4987adce48e547613d1b9b.jpg" alt="Phần chào mừng và giới thiệu DSP trên sân khấu">
+        </div>
+        <div class="gal g3" style="margin-top:32px">
+          <img class="art" src="assets/2b7bf2faaef03c563395bb6e69d1a2e0.jpg" alt="Khách mời xem catalogue tại sự kiện">
+          <img class="art" src="assets/30188fee20aab7f2232ba48ce4413abb.jpg" alt="Trao đổi giữa các đối tác tại sự kiện">
+          <img class="art" src="assets/44367b7d9a90b09d331e4739a7ca318d.jpg" alt="Toàn cảnh hội trường và khu trưng bày sản phẩm">
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">02</span><h4>My Contributions</h4></div>
+        <ul class="svc" style="margin:0">
+          <li>Client Sourcing &amp; Development</li>
+          <li>Social Media Content Planning</li>
+          <li>Guest &amp; Attendee Engagement</li>
+          <li>Partner &amp; Meeting Schedule Management</li>
+          <li>On-site Event Operations</li>
+        </ul>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">03</span><h4>Results</h4></div>
+        <div class="stats">
+          <div class="stat"><p class="num">20+</p><p class="lbl">B2C Partners</p></div>
+          <div class="stat"><p class="num">25+</p><p class="lbl">B2B Partners</p></div>
+        </div>
+      </section>
+
+    </div>
+    <div class="dnav"><label for="x02" class="pnav">← Previous project</label><label for="x04" class="pnav">Next project →</label></div>
+  </div>
+
+  <div class="pd t-white" id="pd04">
+    <div class="top"><span>04 / 10</span><label for="pnone" class="pclose">Close ✕</label></div>
+    <h3 class="dtitle" style="font-family:'Inter',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(36px,7.5vw,110px);margin:56px 0 0">SEOUL–HCMC<br>Trade Delegation</h3>
+    <p class="meta" style="font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:clamp(14px,1.6vw,24px);letter-spacing:.12em;margin:24px 0 56px">Professional / SINASEAN Event</p>
+    <div class="dbody" style="grid-template-columns:1fr">
+      <div>
+        <p class="desc">A B2B trade delegation connecting 30 Korean KWBIZ companies with Vietnamese businesses and partners through matchmaking meetings, export consultations and on-site networking.</p>
+      </div>
+    </div>
+    <div class="case" style="margin-top:128px">
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">01</span><h4>2025 SEOUL–HCMC Trade Delegation</h4></div>
+        <div class="meetfacts">
+          <div><p class="k">Date</p><p class="mv">28 / 10 / 2025</p></div>
+          <div><p class="k">Location</p><p class="mv">LOTTE Hotel Saigon</p></div>
+        </div>
+        <div class="gal g3" style="margin-top:56px">
+          <img class="art" src="assets/a24a957fe094e11dc497d761dce54dc1.jpg" alt="Buổi gặp gỡ B2B tại gian hàng mỹ phẩm">
+          <img class="art" src="assets/792e0dc5b6a859d462ea6098dbadb4f6.jpg" alt="Trao đổi giữa doanh nghiệp Hàn Quốc và Việt Nam tại gian hàng JINSUNGON">
+          <img class="art" src="assets/942261990422a9419175e0bec22f4b79.jpg" alt="Tư vấn B2B tại gian hàng BESTebi">
+        </div>
+        <div class="gal g3" style="margin-top:32px">
+          <img class="art" src="assets/ff8dbe056be006cca4eae04e6243aba4.jpg" alt="Lễ ký kết tại Export Consultation Meeting">
+          <img class="art" src="assets/af41bfcbcf3232f4135e3db7d34a5e2f.jpg" alt="Trao đổi tại gian hàng UniqueMi">
+          <img class="art" src="assets/748e7b0d98e7e872afaef6687e4eddf8.jpg" alt="Ký kết biên bản ghi nhớ giữa hai doanh nghiệp">
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">02</span><h4>My Contributions</h4></div>
+        <ul class="svc" style="margin:0">
+          <li>Client Sourcing &amp; Development</li>
+          <li>Social Media Content Planning</li>
+          <li>Participant Engagement &amp; Relationship Management</li>
+          <li>Partner Coordination &amp; B2B Meeting Schedules</li>
+          <li>On-site Event Operations (KWBIZ)</li>
+        </ul>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">03</span><h4>Results</h4></div>
+        <div class="stats">
+          <div class="stat"><p class="num">300+</p><p class="lbl">Business Meetings with Companies &amp; Partners</p></div>
+          <div class="stat"><p class="num">20+</p><p class="lbl">Business Partners</p></div>
+        </div>
+      </section>
+
+    </div>
+    <div class="dnav"><label for="x03" class="pnav">← Previous project</label><label for="x05" class="pnav">Next project →</label></div>
+  </div>
+
+  <div class="pd t-taupe" id="pd05">
+    <div class="top"><span>05 / 10</span><label for="pnone" class="pclose">Close ✕</label></div>
+    <h3 class="dtitle" style="font-family:'Inter',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(36px,7.5vw,110px);margin:56px 0 0">Binggrae Pop-up<br>Activation</h3>
+    <p class="meta" style="font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:clamp(14px,1.6vw,24px);letter-spacing:.12em;margin:24px 0 56px">Professional / SINASEAN Event</p>
+    <div class="dbody" style="grid-template-columns:1fr">
+      <div>
+        <p class="desc">A two-weekend Binggrae pop-up activation across two Ho Chi Minh City malls, bringing the Korean banana milk brand directly to shoppers through tastings, photo moments and festive merchandise.</p>
+      </div>
+    </div>
+    <div class="case" style="margin-top:128px">
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">01</span><h4>Pop-up Activation</h4></div>
+        <div class="meetfacts">
+          <div><p class="k">Time</p><p class="mv">December 5–7 &amp; December 12–14, 2025</p></div>
+          <div><p class="k">Location</p><p class="mv">Vạn Hạnh Mall<br>Vincom Thảo Điền</p></div>
+        </div>
+        <div class="gal g3" style="margin-top:56px">
+          <img class="art" style="aspect-ratio:4/3;object-fit:cover" src="assets/c1b6210928626861bb9658fd645aa71a.jpg" alt="Nhân viên và khách cầm ly đồ uống Binggrae tại gian hàng">
+          <img class="art" style="aspect-ratio:4/3;object-fit:cover" src="assets/de06ee8447c5db7654961b01d32413fc.jpg" alt="Ly Binggrae in họa tiết Giáng sinh cùng túi và khăn quà tặng">
+          <img class="art" style="aspect-ratio:4/3;object-fit:cover" src="assets/7665594f2db064a8999d87ea22fa8a4c.jpg" alt="Nhân viên sắp xếp sản phẩm và quà tặng Binggrae">
+        </div>
+        <div class="gal g2" style="margin-top:24px">
+          <img class="art" style="aspect-ratio:4/3;object-fit:cover" src="assets/b57c47e38776728be182e448117a779f.jpg" alt="Khách xếp hàng nghe hướng dẫn tại quầy pha chế pop-up">
+          <img class="art" style="aspect-ratio:4/3;object-fit:cover" src="assets/9d2731d6aed4c567f9ebb3181d047881.jpg" alt="Toàn cảnh gian hàng pop-up nhìn từ trên cao">
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">02</span><h4>My Contributions</h4></div>
+        <ul class="svc" style="margin:0">
+          <li>Facebook Content for Event Promotion</li>
+          <li>On-site Visitor Support</li>
+          <li>Event Logistics &amp; Setup</li>
+          <li>End-to-end Operations Support</li>
+        </ul>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">03</span><h4>Results</h4></div>
+        <div class="stats">
+          <div class="stat"><p class="num">1000+</p><p class="lbl">Event Participants</p></div>
+          <div class="stat"><p class="num">90%</p><p class="lbl">Participant Satisfaction Rate</p></div>
+        </div>
+      </section>
+
+    </div>
+    <div class="dnav"><label for="x04" class="pnav">← Previous project</label><label for="x06" class="pnav">Next project →</label></div>
+  </div>
+
+  <div class="pd t-graphite" id="pd06">
+    <div class="top"><span>06 / 10</span><label for="pnone" class="pclose">Close ✕</label></div>
+    <h3 class="dtitle" style="font-family:'Inter',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(36px,7.5vw,110px);margin:56px 0 0">Bật Niềm Vui —<br>“Free” Giới Hạn</h3>
+    <p class="meta" style="font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:clamp(14px,1.6vw,24px);letter-spacing:.12em;margin:24px 0 56px">Academic / Pepsi IMC Concept</p>
+    <div class="dbody" style="grid-template-columns:1fr">
+      <div>
+        <p class="desc">A six-month Integrated Marketing Communications concept for a non-alcoholic Pepsi product line, from campaign framework and packaging to mascot, viral clip and TVC.</p>
+      </div>
+    </div>
+    <div class="case" style="margin-top:128px">
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">01</span><h4>Communication Planning</h4></div>
+        <div class="cs-grid2" style="grid-template-columns:minmax(220px,300px) 1fr">
+          <p class="k" style="margin:0">Course Requirements</p>
+          <p class="lead">Develop an Integrated Marketing Communications (IMC) plan over a <b>six-month</b> period based on the provided brief, focused on <b>developing and promoting a non-alcoholic Pepsi product line</b> that fits the brand’s expansion into the alcoholic beverage market while keeping its core identity.</p>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">02</span><h4>Key Responsibilities</h4></div>
+        <ul class="svc" style="margin:0">
+          <li>Project Leader (Project Management &amp; Team Coordination)</li>
+          <li>Brainstorming &amp; TVC Scriptwriting</li>
+          <li>Campaign Framework Planning &amp; Social Media Strategy</li>
+          <li>Video Production Support &amp; On-set Coordination</li>
+        </ul>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">03</span><h4>Objectives</h4></div>
+        <div class="steps" style="margin-bottom:0">
+          <div class="step"><p class="sd">Develop a six-month integrated marketing communications strategy.</p></div>
+          <div class="step"><p class="sd">Design creative product packaging and brand identity.</p></div>
+          <div class="step"><p class="sd">Produce a TVC and viral video that effectively communicate the brand message.</p></div>
+          <div class="step"><p class="sd">Capture audience attention within the first 6–10 seconds.</p></div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">04</span><h4>Campaign Framework</h4></div>
+        <a class="k" href="https://docs.google.com/spreadsheets/d/1530c-DJvxj2hWjgbpqNC7R0_0oHCDwvJTVV9BBshr1Q/edit?gid=1553423147#gid=1553423147" target="_blank" rel="noopener" style="display:inline-block;margin:0 0 16px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px">Campaign Framework ↗</a>
+        <div class="sheet" tabindex="0" aria-label="Campaign Framework: kế hoạch truyền thông 6 tháng">
+          <table>
+            <tr><th class="rl">THÁNG</th><th class="m1">7 – 8</th><th class="m2">9 – 10</th><th class="m3">11 – 12</th></tr>
+            <tr><th class="rl">Mục tiêu chung</th>
+              <td><ul><li>Tăng nhận biết về bộ nhận diện thương hiệu mới đến khách hàng</li><li>Tăng nhu cầu của khách hàng với sản phẩm mới</li></ul></td>
+              <td><ul><li>Tăng doanh thu</li><li>Tạo sự quan tâm và tăng cường sự tương tác</li></ul></td>
+              <td><ul><li>Gắn kết và tạo lòng trung thành</li><li>Tăng doanh thu</li><li>Tổng kết chiến dịch</li></ul></td></tr>
+            <tr><th class="rl">Định hướng chiến lược</th>
+              <td><ul><li>Xây dựng chiến dịch quảng cáo, giáo dục nhận thức về thương hiệu mới</li></ul></td>
+              <td><ul><li>Tăng cường sự hợp tác với người nổi tiếng và tăng độ tương tác</li></ul></td>
+              <td><ul><li>Xây dựng và duy trì cộng đồng</li><li>Kiểm tra, đánh giá hiệu quả chiến dịch</li></ul></td></tr>
+            <tr><th class="rl">Giai đoạn</th><th class="gd">GD 1: Tiền ra mắt sản phẩm</th><th class="gd">GD 2: Ra mắt sản phẩm</th><th class="gd">GD 3: Sau ra mắt sản phẩm</th></tr>
+            <tr><th class="rl">PR</th>
+              <td><ul><li>Chuẩn bị thông cáo báo chí</li><li>Các bài báo mở đầu phủ sóng, thông tin cho người dùng về sự kiện tái nhận diện thương hiệu</li></ul><p class="sub">Hướng đi trên các nền tảng</p><ul><li><b>VNExpress:</b> Liệu lần tái nhận diện thương hiệu lần này Pepsi sẽ cho chúng ta bất ngờ gì?</li><li><b>Vietnamnet:</b> Pepsi có tiếp tục là nhà tài trợ cho Rap Việt mùa 4 này không?</li><li><b>Advertising Viet Nam / Brands Vietnam:</b> Pepsi nhá hàng bao bì sản phẩm cho lần tái nhận diện thương hiệu có đáng mong chờ?</li><li><b>Fanpage có tích xanh:</b> Tung hình ảnh mập mờ về sản phẩm mới, thông báo là nhà tài trợ kim cương cho chương trình Rap Việt 2024</li></ul></td>
+              <td><ul><li>Họp báo ra mắt sản phẩm mới</li><li>Gửi thông cáo báo chí đến các cơ quan báo đài</li><li>Các bài báo mở đầu phủ sóng, tăng tính nhận diện cho thương hiệu</li><li>Bài PR testimonial khách hàng đã trải nghiệm sản phẩm mới</li></ul><p class="sub">Hướng đi trên các nền tảng</p><ul><li><b>VNExpress:</b> Phỏng vấn cảm nhận của người dùng sau khi dùng thử sản phẩm</li><li><b>Advertising Viet Nam / Brands Vietnam:</b> Phân tích sản phẩm mới, thương hiệu mới, ý đồ của thương hiệu, đánh giá design...</li><li><b>Fanpage có tích xanh:</b> Mục đích quảng bá sản phẩm, thông báo là nhà tài trợ vàng của Rap Việt 2024</li></ul></td>
+              <td><ul><li>Bài PR cho các chương trình khuyến mại, VD: Mua 2 tặng 1</li></ul></td></tr>
+            <tr><th class="rl">Quảng cáo</th>
+              <td><ul><li>Tung teaser cho TVC</li></ul></td>
+              <td><ul><li>Ra mắt TVC</li><li>Quảng cáo giờ vàng các kênh HTV2, VTV3, VTV2, HTV7, HTV9</li><li>Display Ads trên báo online như VnExpress, Báo Dân Trí, Vietnamnet, Tuổi Trẻ Online</li><li>Quảng cáo trên Facebook, Youtube, Instagram...</li></ul></td>
+              <td><ul><li>Viral clip về chương trình Rap Việt</li><li>Quảng cáo giờ vàng các kênh HTV2, VTV3, VTV2, HTV7, HTV9</li><li>Youtube Ads, TikTok Ads, Facebook Ads, Instagram Ads...</li><li>Display Ads trên Kênh 14, VnExpress, Tuổi Trẻ</li></ul></td></tr>
+            <tr><th class="rl">OOH</th><td colspan="3">Xuyên suốt 6 tháng ở HCM, HN, Đà Nẵng...: poster, backdrop tại sự kiện, LCD tòa nhà, billboard, light box, xe bus.</td></tr>
+            <tr><th class="rl">Khuyến mại</th><td colspan="3"><ul><li>Hợp tác với MoMo: mua 1 tặng 1 (mua vị này tặng vị khác)</li><li>Mở nắp lon trúng lượt quay may mắn (Vespa, iPhone 15 Pro Max, tai nghe Marshall...)</li></ul></td></tr>
+            <tr><th class="rl">Activation</th><td colspan="3"><ul><li>Họp báo ra mắt sản phẩm mới, với sự tham gia của cổ đông, nghệ sĩ khách mời, giám đốc sáng tạo, designer... Chương trình gồm: giới thiệu sản phẩm, tiết mục âm nhạc, tặng sản phẩm dùng thử miễn phí cho báo chí và khách mời, photobooth</li><li>Bắt đầu phát mẫu thử ở siêu thị, chợ, trung tâm thương mại...</li><li>Minigame tự thiết kế bao bì kêu gọi người dùng tạo lon độc lạ và nhận quà</li><li>Mời ca sĩ biểu diễn tại siêu thị lớn có booth dùng thử, ví dụ Tóc Tiên, Suboi...</li><li>Lễ hội âm nhạc kết hợp nhạc nước và booth bán thức ăn, phát mẫu thử</li><li>Mini-game tại chỗ như ném vòng trúng quà và 1 lon bia 0 độ Pepsi</li><li>Tài trợ chương trình Water Bomb</li></ul></td></tr>
+            <tr><th class="rl">Social media</th><td colspan="3"><ul><li>Đăng bài nhá hàng sản phẩm sắp ra mắt. Bật mí hình ảnh người đại diện cho sản phẩm mới. Công bố Pháp Kiều (thí sinh Rap Việt mùa trước) là người đại diện</li><li>Tạo độ thảo luận trên các fanpage như Insight Mất Lòng, Advertising Vietnam, Trại Tâm Thần Đa Ngôn Ngữ...</li><li>Kênh online news: Paid media (influencer, hot pages, communities); Owned media (Fanpage Pepsi)</li><li>Liên tục cập nhật hình ảnh sản phẩm kèm câu nói viral</li><li>Thông báo cuộc thi nhảy đường phố. Phát hành clip TikTok Dance Challenge với hashtag #Pepsibia0do #tainhandienthuonghieu #Pepsiramatsanpahmmoi</li><li>Loạt bài quảng bá podcast: đoán host, minigame đoán khách mời các tập. Podcast “Vượt ngưỡng bứt phá giới hạn”. Đăng highlight viral từ podcast</li><li>Recap sự kiện ra mắt và những người nổi tiếng check-in</li><li>Cổ vũ random street dance tại phố đi bộ</li><li>Tiếp tục chuỗi podcast cùng Thùy Minh và các nghệ sĩ như Wren Evans, GREY D, Pháo, Phương Mỹ Chi...</li><li>Công bố người thắng cuộc thi nhảy đường phố</li><li>Bài về “Chuyến Đi Mạo Hiểm Với Bia Không Cồn” và influencer trong chuyến đi. Loạt bài quảng bá Pepsi Bia 0 độ x Rap Việt</li><li>Hình ảnh thí sinh Rap Việt thưởng thức sản phẩm</li><li>Công bố người thắng minigame thiết kế bao bì</li><li>Loạt bài về lễ hội âm nhạc Water Bomb, quảng bá mua sản phẩm để có cơ hội trúng vé xem lễ hội. Cập nhật hình ảnh lễ hội, công bố người trúng vé</li><li>Đăng highlight event lên các nền tảng MXH khác của Pepsi</li></ul></td></tr>
+            <tr><th class="rl">E-commerce</th><td colspan="3"><ul><li>Tạo gian hàng trên Shopee, Lazada...</li><li>Tung loạt voucher khuyến mãi vào các ngày siêu sale 11.11 và 12.12</li></ul></td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">05</span><h4>Product Packaging</h4></div>
+        <div class="gal g3">
+          <img class="art" src="assets/95b8d37f91d4c9cf4fce115acb03125b.jpg" alt="Lon Pepsi Roasty Arabica màu xanh mint">
+          <img class="art" src="assets/759e54ef2ad7c59ca8ed41a4761d9d20.jpg" alt="Lon Pepsi phối màu kem vàng">
+          <img class="art" src="assets/1a557eb28e67609b3db32b3070cdb114.jpg" alt="Lon Pepsi phối màu hồng pastel">
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">06</span><h4>Mascot</h4></div>
+        <img class="art" style="max-width:1100px;margin:0 auto" src="assets/79545101b2a333046bae964a8eca9eba.png" alt="Linh vật của chiến dịch ở ba góc nhìn">
+      </section>
+
+      <div class="cs-duo">
+      <section class="cs">
+        <div class="cshead"><span class="csn">07</span><h4>Viral Clip</h4></div>
+        <a class="k" href="https://drive.google.com/file/d/1NjV2r8Y4v0pIKlqO7qjVuxNsCVfApM-j/view?usp=drive_link" target="_blank" rel="noopener" style="display:inline-block;margin:0 0 16px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px">Xem trên Drive ↗</a>
+        <video controls="" playsinline="" preload="metadata" poster="assets/e89c657fea69c9c9504aab847432ced9.jpg" style="display:block;width:100%;max-width:340px;aspect-ratio:9/16;border-radius:10px;background:#000">
+          <source src="assets/3f89d8411798158f07ab5b4a20f404c6.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">08</span><h4>TVC</h4></div>
+        <a class="k" href="https://drive.google.com/file/d/1TRXJUmb94ws7sfdD7NdLzYxUITdwYm_g/view?usp=drive_link" target="_blank" rel="noopener" style="display:inline-block;margin:0 0 16px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px">Xem trên Drive ↗</a>
+        <video controls="" playsinline="" preload="metadata" poster="assets/ea8ce765974c3a291c3e84a0aadeb940.jpg" style="display:block;width:100%;aspect-ratio:16/9;border-radius:10px;background:#000">
+          <source src="assets/3088f51eb910c2faf5246bc6092615ee.mp4" type="video/mp4">
+        </video>
+      </section>
+      </div>
+
+    </div>
+    <div class="dnav"><label for="x05" class="pnav">← Previous project</label><label for="x07" class="pnav">Next project →</label></div>
+  </div>
+
+  <div class="pd t-blue" id="pd07">
+    <div class="top"><span>07 / 10</span><label for="pnone" class="pclose">Close ✕</label></div>
+    <h3 class="dtitle" style="font-family:'Inter',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(36px,7.5vw,110px);margin:56px 0 0">MV Lý Kéo Chài</h3>
+    <p class="meta" style="font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:clamp(14px,1.6vw,24px);letter-spacing:.12em;margin:24px 0 56px">Academic / Music Video / Production</p>
+    <div class="dbody" style="grid-template-columns:1fr">
+      <div>
+        <p class="desc">A music video that blends traditional folk melodies with modern music, making cultural values feel closer to young audiences. A young man chases a mysterious flute-playing girl, a metaphor for pursuing inspiration, into a lively fishing village where he finds joy and creativity. He wakes to realize it was a dream, one that inspires him to finish his song.</p>
+      </div>
+    </div>
+    <div class="case" style="margin-top:128px">
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">01</span><h4>Music Video</h4></div>
+        <a class="k" href="https://www.youtube.com/watch?v=oQZVOADPWVE" target="_blank" rel="noopener" style="display:inline-block;margin:0 0 16px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px">Link YouTube ↗</a>
+        <a href="https://www.youtube.com/watch?v=oQZVOADPWVE" target="_blank" rel="noopener" aria-label="Xem MV Lý Kéo Chài trên YouTube" style="display:block;position:relative;width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000 url(assets/c0669f230f685caa9aacf9db765013f6.jpg) center/cover no-repeat">
+          <span style="position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:rgba(253,251,249,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(53,40,39,.25)"><span style="display:block;margin-left:6px;border-style:solid;border-width:15px 0 15px 25px;border-color:transparent transparent transparent #352827"></span></span>
+        </a>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">02</span><h4>My Contributions</h4></div>
+        <div class="steps" style="margin-bottom:0">
+          <div class="step"><p class="k" style="margin:0 0 12px">Project Management &amp; Pre-production</p><p class="sd">Led the team, created project plans and timelines.</p></div>
+          <div class="step"><p class="k" style="margin:0 0 12px">On-set Production</p><p class="sd">Supported shooting operations as PA, managed schedules, kept team morale high, and coordinated with the director for a smooth shoot.</p></div>
+        </div>
+      </section>
+
+    </div>
+    <div class="dnav"><label for="x06" class="pnav">← Previous project</label><label for="x08" class="pnav">Next project →</label></div>
+  </div>
+
+  <div class="pd t-rose" id="pd08">
+    <div class="top"><span>08 / 10</span><label for="pnone" class="pclose">Close ✕</label></div>
+    <h3 class="dtitle" style="font-family:'Inter',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(36px,7.5vw,110px);margin:56px 0 0">Unicorn KPI</h3>
+    <p class="meta" style="font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:clamp(14px,1.6vw,24px);letter-spacing:.12em;margin:24px 0 56px">Academic / Animation Production</p>
+    <div class="dbody" style="grid-template-columns:1fr">
+      <div>
+        <p class="desc" style="font-size:22px">“UNICORN KPI” is an animated short film project created for the Animation Production course by Kỵ Sỹ Hoà Bình.</p>
+        <p class="desc" style="font-size:22px;margin-top:20px">The film tells the story of Unicorn, once a sacred mascot, who now finds itself lost in the modern world as a “weather shipper” overwhelmed by KPI pressure. Exhausted, it retreats into the deep forest and finds healing through the pure faith of a young boy. When a severe natural disaster strikes the city as a punishment, Unicorn puts aside its pain to return and save the people. After defeating the greedy weather corporation, fresh rain falls upon the city once more, helping Unicorn discover its true self-worth and reclaim its long-lost happiness.</p>
+      </div>
+    </div>
+    <div class="case" style="margin-top:128px">
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">01</span><h4>My Contributions</h4></div>
+        <div class="steps" style="margin-bottom:0;grid-template-columns:1fr 1fr 1fr">
+          <div class="step"><p class="k" style="margin:0 0 12px">Pre-production</p><p class="sd">Served as Project Leader (planning, project management, timeline coordination) and developed the story &amp; script.</p></div>
+          <div class="step"><p class="k" style="margin:0 0 12px">Production</p><p class="sd">Provided voice acting for the project / character cast.</p></div>
+          <div class="step"><p class="k" style="margin:0 0 12px">Post-production</p><p class="sd">Managed final project deliverables and coordination.</p></div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">02</span><h4>Tools</h4></div>
+        <ul class="svc" style="margin:0">
+          <li>Moho</li>
+          <li>Canva</li>
+          <li>ChatGPT</li>
+        </ul>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">03</span><h4>Script</h4></div>
+        <a class="k" href="https://docs.google.com/spreadsheets/d/1xIXjvPesPO0a0jnluaAkPd-J3dSIwGENO7JkrXN-y5w/edit?gid=0#gid=0" target="_blank" rel="noopener" style="display:inline-block;margin:0 0 16px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px">Script ↗</a>
+        <div class="kbwrap">
+          <div class="sheet uni" tabindex="0" aria-label="Kịch bản phân cảnh UNICORN KPI, cuộn để xem">
+            <table>
+              <thead>
+                <tr class="ttl"><th colspan="8">UNICORN KPI<br>When magic becomes a metric</th></tr>
+                <tr class="hdr"><th style="width:44px;min-width:44px;max-width:44px">Cảnh</th><th style="width:84px">Cỡ cảnh</th><th style="width:130px">Động tác máy</th><th style="width:60px">Thời lượng</th><th style="width:27%">Hình ảnh / Hành động</th><th style="width:21%">Âm thanh</th><th style="width:17%">Nhạc nền / Hiệu ứng</th><th>Note</th></tr>
+              </thead>
+              <tbody>
+              <tr class="sec"><td colspan="8">PHÂN CẢNH 1 - HUYỀN THOẠI CỔ TÍCH</td></tr>
+              <tr><td class="stt">1.1</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Góc máy cao</td><td class="dur">0:03<br>–<br>0:07</td><td><p>Cánh đồng cỏ xanh trải tới chân trời, núi tím mờ phía xa</p></td><td><p>Thoại mở đầu về thời xa xưa</p></td><td></td><td></td></tr>
+              <tr><td class="stt">1.2</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Low Angle</td><td class="dur">0:07<br>–<br>0:11</td><td><p>Kì Lân xuất hiện từ sau ngọn đồi, bờm bay trong gió</p></td><td><p>Thoại giới thiệu sinh vật huyền bí; tiếng vó ngựa; sparkle SFX</p></td><td></td><td></td></tr>
+              <tr><td class="stt">1.3</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc máy chạy ngang (Pan)</td><td class="dur">0:11<br>–<br>0:14</td><td><p>Kì Lân chạy trên mặt đất, hoa cỏ nở ngay khi móng chạm xuống</p></td><td></td><td></td><td><p>(Dolly Out)</p></td></tr>
+              <tr><td class="stt">1.4</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">0:14<br>–<br>0:17</td><td><p>Một cơn mưa rào lướt qua dưới nắng; Kì Lân nối mưa với nắng tạo cầu vồng</p></td><td><p>Thoại; tiếng mưa hòa cùng tiếng ngân từ chiếc sừng</p></td><td></td><td></td></tr>
+              <tr><td class="stt">1.5</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">0:17<br>–<br>0:20</td><td><p>Kì Lân ngẩng đầu, ánh sáng đa sắc từ chiếc sừng xoắn vẽ đường cung qua giọt nước</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">1.6</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc cận</td><td class="dur">0:20<br>–<br>0:24</td><td><p>Cận ánh mắt Kì Lân, phản chiếu một vương quốc thái bình, hài hòa</p></td><td><p>Thoại về sự khởi đầu tươi đẹp của vương quốc</p></td><td><p>Nhạc nền trỗi dậy mạnh mẽ, huy hoàng (Orchestra)</p></td><td></td></tr>
+              <tr><td class="stt">1.7</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Góc toàn</td><td class="dur">0:24<br>–<br>0:27</td><td><p>Cầu vồng bao trùm cả vương quốc</p></td><td><p>Thoại kết truyện; "The end"</p></td><td><p>Nhạc thần tiên lớn dần; tiếng chim reo mừng</p></td><td></td></tr>
+              <tr><td class="stt">1.8</td><td class="cs1"><span class="pl" style="background:#E6E0DA">Chuyển cảnh</span></td><td>Góc trung, zoom out</td><td class="dur">0:27<br>–<br>0:28.5</td><td><p>Hình ảnh zoom out vào trang cuối cuốn truyện; tông màu chuyển xám, chán nản</p></td><td><p>Chỉ còn ambience</p></td><td><p>Nhạc cắt đột ngột</p></td><td></td></tr>
+              <tr><td class="stt">1.9</td><td class="cs1"></td><td>Góc trung</td><td class="dur">0:28.5<br>–<br>0:29.5</td><td><p>Dưới ánh nắng xám và gió lùa qua cửa sổ, từng trang sách được lật</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">1.10</td><td class="cs1"></td><td></td><td class="dur">0:29.5<br>–<br>0:30</td><td><p>Camera lia ra không gian một căn phòng nhỏ, đơn giản, tông màu chán nản</p></td><td></td><td></td><td></td></tr>
+              <tr class="sec"><td colspan="8">PHÂN CẢNH 2 - THỜI HIỆN ĐẠI</td></tr>
+              <tr><td class="stt">2.1</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc cận</td><td class="dur">0:30<br>–<br>0:34</td><td><p>(Dolly out) Hình ảnh kì lân ngày xưa được lồng vào khung hình</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">2.2</td><td class="cs1"><span class="pl" style="background:#D9CBEB">Đặc tả</span></td><td>Đặc tả</td><td class="dur">0:34<br>–<br>0:40</td><td><p>Một chiếc đồng hồ điện tử hiện số 06:00 rực đỏ. Bàn tay móng guốc mệt mỏi đập xuống.</p></td><td><p>Tiếng "Bíp bíp" chói tai của báo thức. Tiếng "Bộp" của móng guốc chạm nhựa.</p></td><td><p>Nhạc cắt đột ngột. Một nốt trầm kéo dài (Deep Drone) u ám.</p></td><td></td></tr>
+              <tr><td class="stt">2.3</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc cận qua vai</td><td class="dur">0:40<br>–<br>0:47</td><td><p>Kì lân soi gương, chiếc sừng bám bụi xám. Nó thở dài, hơi thở phả ra thành làn khói đục.</p></td><td><p>Tiếng thở dài nặng nề. Tiếng sột soạt khi đeo dây thẻ nhân viên. Tiếng đồng hồ tích tắc chậm chạp, vọng lại (Echo).</p></td><td></td><td></td></tr>
+              <tr><td class="stt">2.4</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">0:47<br>-<br>0:53</td><td><p>Kì lân dắt xe điện ra khỏi gara chật hẹp.</p></td><td><p>Tiếng cửa sắt rít "Két... két". Tiếng lạch cạch của các bình kim loại va vào nhau.</p></td><td><p>Nhạc Lofi nhịp điệu chậm, mang cảm giác u sầu, buồn tẻ.</p></td><td></td></tr>
+              <tr><td class="stt">2.5</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc máy nghiêng</td><td class="dur">0:53<br>–<br>1:03</td><td><p>Bên trong kho xưởng tự động: Kì Lân đứng vào vị trí. Những cánh tay máy móc cơ khí tự động lắp thùng hàng. Và đóng gói in hình màu cầu vồng một cách công nghiệp và buồn tẻ</p></td><td></td><td><p>Nhạc Industrial đều đều, gây khó chịu, nhấn mạnh sự cô lập.</p></td><td></td></tr>
+              <tr><td class="stt">2.6</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc cận</td><td class="dur">1:03<br>–<br>1:10</td><td><p>Tên quản lý (con người) với vẻ mặt vô cảm, giận dữ, chỉ tay vào đồng hồ, thúc giục.</p></td><td><p>Tiếng quát tháo không rõ lời. Tiếng gõ "cộc cộc" vào sừng. Tiếng "u u" nặng nề trong đầu Kì Lân, tăng cường cảm giác bị đối xử như công cụ.</p></td><td></td><td></td></tr>
+              <tr><td class="stt">2.7</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">1:10<br>–<br>1:15</td><td><p>Kì Lân cúi đầu lầm lũi dắt xe ra bãi đỗ.</p></td><td></td><td></td><td></td></tr>
+              <tr class="sec"><td colspan="8">PHÂN CẢNH 3: ĐỈNH ĐIỂM KPI - SHIPPER KIỆT QUỆ</td></tr>
+              <tr><td class="stt">3.1</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Góc toàn</td><td class="dur">0:15<br>–<br>1:23</td><td><p>Kì Lân lái xe điện điên cuồng. Các bảng hiệu neon trên phố như rung lắc, đổ ập vào máy quay.</p></td><td><p>Tiếng còi xe rền rĩ, tiếng "Tinh tinh" dồn dập của 10 đơn hàng cùng lúc.</p></td><td><p>Nhạc Industrial Techno nhịp độ cực nhanh, gây cảm giác nôn nóng.</p></td><td></td></tr>
+              <tr><td class="stt">3.2</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">1:23<br>–<br>1:33</td><td><p>Cảnh chồng lớp (Superimpose): Khuôn mặt Kì Lân đầy mồ hôi ở giữa, xung quanh là 3-4 khung hình nhỏ hiện ra cùng lúc:</p><p>1. Một bà nội trợ chỉ tay: "Giao cầu vồng mà trễ thế này à?"</p><p>2. Một gã mặc vest quát vào điện thoại: "Sự kiện của tôi bắt đầu rồi! Đồ vô dụng!"</p><p>3. Một nhóm thiếu niên cười cợt: "Cầu vồng gì mà xỉn màu vậy?"</p></td><td><p>Tiếng thoại chồng chéo: "Trừ lương nó đi!", "Nhanh lên!", "Đồ shipper rẻ tiền!", "Tệ quá!". Tiếng vang (Echo) của các câu chửi bới tạo thành một vòng lặp gây nhức óc.</p></td><td></td><td></td></tr>
+              <tr><td class="stt">3.3</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">1:33<br>–<br>1:40</td><td><p>Chiếc sừng Kì Lân rung lên bần bật. Những cuộc gọi hiện lên lơ lửng trước mắt (Hologram): "Hủy đơn", "Khiếu nại", "Yêu cầu bồi thường".</p></td><td><p>Tiếng chuông điện thoại nhiều tông độ khác nhau reo liên hồi, không dứt.</p></td><td><p>Một tiếng rít cao tần (High-pitched ring) tăng dần âm lượng.</p></td><td></td></tr>
+              <tr><td class="stt">3.4</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">1:40<br>–<br>1:50</td><td><p>(Montage nhanh) Kì Lân xuất hiện ở 3 địa điểm khác nhau trong 1 khung hình (chia màn hình):</p><p>- Góc trái: Màn hình điện thoại bị complain sao chưa đến?</p><p>- Góc phải: Bắn cầu vồng cho một đám cưới chạy mưa.</p><p>- Ở giữa: Đang bị một khách hàng túm bờm đòi bồi thường.</p></td><td><p>Tiếng súng laser "Xè xè" xen lẫn tiếng mắng nhiếc cực đại.</p></td><td><p>Nhạc nền bỗng dưng bị bóp méo (Distortion) như cuộn băng bị hỏng.</p></td><td></td></tr>
+              <tr><td class="stt">3.5</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">1:50<br>–<br>1:56</td><td><p>Kì Lân dừng xe ở ngã tư.</p></td><td><p>Tiếng thở dốc như sắp ngạt thở. Tiếng móng guốc cào lên tay lái nhựa.</p></td><td><p>Nhạc nền tắt lịm, chỉ còn tiếng "u u" cô đặc và nặng nề.</p></td><td></td></tr>
+              <tr><td class="stt">3.6</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc cận</td><td class="dur">1:56<br>–<br>2:02</td><td><p>Nó đưa tay bịt tai lại nhưng những tiếng chửi bới vẫn vang lên từ chiếc loa gắn trên cổ áo đồng phục.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">3.7</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc trên cao</td><td class="dur">2:02<br>–<br>2:07</td><td><p>Lon nước tăng lực trên tay Kì Lân run rẩy rồi rơi xuống bùn.</p></td><td><p>Tiếng lon kim loại rơi "Chát". Tiếng nước bắn tung tóe "Tõm". Tiếng sấm thật từ xa vọng lại như một lời cảnh báo từ tự nhiên.</p></td><td></td><td></td></tr>
+              <tr><td class="stt">3.8</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc trên cao</td><td class="dur">2:07<br>–<br>2:10</td><td><p>Lon nước rơi xuống bùn.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">3.9</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">2:10<br>–<br>2:15</td><td><p>Hình ảnh phản chiếu của Kì Lân trong vũng nước bị vỡ tan khi một chiếc xe khác chạy qua.</p></td><td></td><td></td><td></td></tr>
+              <tr class="sec"><td colspan="8">PHÂN CẢNH 4: CHẠY TRỐN</td></tr>
+              <tr><td class="stt">4.1</td><td class="cs1"><span class="pl" style="background:#D9CBEB">Đặc tả</span></td><td>Góc đặc tả</td><td class="dur">2:15<br>–<br>2:18</td><td><p>Màn hình điện thoaị gắn trên xe nứt, hiển thị cảnh báo đơn hàng bị trễ nhấp nháy đỏ. Một giọt mưa thật rơi lên màn hình.</p></td><td><p>Điện thoại rung trên giá kim loại.</p></td><td><p>Nhạc dồn dập bỗng kéo thành một nốt cao chói tai.</p></td><td></td></tr>
+              <tr><td class="stt">4.2</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc máy từ dưới lên</td><td class="dur">2:18<br>–<br>2:22</td><td><p>Kì Lân nhìn chằm chằm vào điện thoại; ánh mắt chuyển từ cam chịu sang giận dữ rồi lạnh lùng. Nó đập vỡ điện thoại và ném đi.</p></td><td><p>Tiếng nhựa vỡ, điện thoại lăn dưới gầm xe khác.</p></td><td><p>Một tiếng trầm mạnh đánh dấu sự bùng nổ.</p></td><td></td></tr>
+              <tr><td class="stt">4.3</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">2:22<br>–<br>2:24</td><td><p>Kì Lân ném mạnh thiết bị xuống mặt đường.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">4.4</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">2:24<br>–<br>2:28</td><td><p>Kì Lân tháo và vứt chiếc mũ bảo hiểm có loa thông báo.</p></td><td><p>Tiếng mũ va xuống đường, tiếng bánh xe rít trên mặt nhựa.</p></td><td><p>Nhịp trống mạnh mẽ, tự do.</p></td><td></td></tr>
+              <tr><td class="stt">4.5</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Góc toàn</td><td class="dur">2:28<br>–<br>2:35</td><td><p>Kì Lân phi qua giữa các tòa nhà xám xịt, hướng về dải núi xanh mờ ở chân trời.</p></td><td><p>Gió rít bên tai, tiếng sấm thật vang lên át tiếng còi xe.</p></td><td><p>Nhạc hùng tráng, vang vọng hơn.</p></td><td></td></tr>
+              <tr><td class="stt">4.6</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Góc toàn</td><td class="dur">2:35<br>–<br>2:39</td><td><p>Vì thiếu cầu vồng, những đám mây đen bắt đầu tụ lại phía trên thành phố.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">4.7</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">2:39<br>–<br>2:43</td><td><p>Chiếc xe điện dừng ở bìa rừng vì hết pin.</p></td><td><p>Kim loại va xuống đất khô; thiên nhiên đột ngột im lặng.</p></td><td><p>Nhạc nhỏ dần, chỉ còn piano nhẹ nhàng.</p></td><td></td></tr>
+              <tr><td class="stt">4.8</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">2:43<br>–<br>2:46</td><td><p>Kì Lân bước xuống và tháo thùng hàng khỏi người.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">4.9</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">2:46<br>–<br>2:50</td><td><p>Kì Lân bước vào bóng râm của những cây cổ thụ.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">4.10</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">2:50<br>–<br>2:53</td><td><p>Móng guốc đặt lên thảm lá khô thay vì đường bê tông.</p></td><td><p>Lá khô xào xạc, tiếng chim bắt đầu hót; âm thanh trong trẻo hơn, không còn tạp âm điện tử.</p></td><td></td><td></td></tr>
+              <tr><td class="stt">4.11</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">2:53<br>–<br>2:55</td><td><p>Kì Lân hít một hơi thật sâu, bờm bắt đầu bay nhẹ theo gió rừng.</p></td><td></td><td></td><td></td></tr>
+              <tr class="sec"><td colspan="8">PHÂN CẢNH 5: RỪNG XANH &amp; SỨC MẠNH TÁI SINH</td></tr>
+              <tr><td class="stt">5.1</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Góc toàn</td><td class="dur">2:55<br>–<br>3:00</td><td><p>Kì Lân đi sâu vào một trảng cỏ rộng, bao quanh bởi những cây cổ thụ khổng lồ. Ánh nắng xuyên qua tán lá tạo thành những luồng sáng</p></td><td><p>Tiếng dế kêu, tiếng chim gõ kiến xa xa. Tiếng gió xào xạc dịu nhẹ.</p></td><td><p>Nhạc Piano rải những nốt cao, trong trẻo như tiếng sương rơi.</p></td><td><p>Không gian đối lập hoàn toàn với sự ngột ngạt ở P.Cảnh 3.</p></td></tr>
+              <tr><td class="stt">5.2</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">3:00<br>–<br>3:04</td><td><p>Giữa trảng cỏ, một cậu bé đang nhảy múa một mình.</p></td><td><p>Tiếng cười khúc khích hồn nhiên của trẻ thơ. Tiếng mưa rơi "tí tách" trên lá.</p></td><td><p>Nhạc có thêm tiếng sáo gỗ (Flute) bay bổng, thanh thoát. Hình ảnh mưa lấp lánh như kim cương.</p></td><td></td></tr>
+              <tr><td class="stt">5.3</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc cận</td><td class="dur">3:04<br>–<br>3:07</td><td><p>Kỳ lạ là trên đầu cậu bé có một đám mây nhỏ đang mưa nhẹ.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">5.4</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">3:07<br>–<br>3:12</td><td><p>Tuy vậy, cậu cũng mặt kệ mưa ướt, vẫn vui đùa cùng cơn mưa, một cách tận hưởng</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">5.5</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc cận</td><td class="dur">3:12<br>–<br>3:16</td><td><p>Kì Lân đứng khựng lại, ngơ ngác nhìn.</p></td><td><p>Tiếng bước chân nhẹ trên cỏ. Tiếng thở của Kì Lân dần ổn định lại.</p></td><td><p>Nhạc lắng xuống, tạo không gian tĩnh lặng, thiêng liêng.</p></td><td></td></tr>
+              <tr><td class="stt">5.6</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc cận</td><td class="dur">3:16<br>–<br>3:20</td><td><p>Cậu bé dừng lại, nhìn Kì Lân với ánh mắt tò mò nhưng đầy thân thiện.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">5.7</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc từ dưới lên (JOJO)</td><td class="dur">3:20<br>–<br>3:24</td><td><p>Cậu bé không sợ hãi, tiến lại gần.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">5.8</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">3:24<br>–<br>3:28</td><td><p>Cậu bé đưa tay ra, chạm nhẹ vào chiếc sừng xỉn màu, đầy vết trầy xước của Kì Lân. Bàn tay nhỏ nhắn của cậu bé lấp lánh dưới làn mưa và những tia nắng</p></td><td><p>Một tiếng ngân vang cực nhỏ nhưng sắc sảo (Crystal chime). Hiệu ứng âm thanh "lấp lánh"</p></td><td></td><td></td></tr>
+              <tr><td class="stt">5.9</td><td class="cs1"><span class="pl" style="background:#D9CBEB">Đặc tả</span></td><td>Góc đặc tả</td><td class="dur">3:28<br>–<br>3:35</td><td><p>Những vết trầy xước trên sừng bắt đầu biến mất. Lớp bụi xám công nghiệp bong ra, để lại lớp sừng trắng ngần, phát ra ánh sáng bảy sắc cầu vồng.</p></td><td><p>Tiếng "Ommm" trầm ấm, lan tỏa như sóng âm.</p></td><td><p>Nhạc nền trỗi dậy mạnh mẽ bằng dàn dây</p></td><td></td></tr>
+              <tr><td class="stt">5.10</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">3:35<br>–<br>3:41</td><td><p>Kì Lân ngẩng cao đầu, một dải cầu vồng thực sự tuôn ra từ chiếc sừng, không cần máy móc, không cần súng bắn. Cầu vồng uốn lượn mềm mại, rực rỡ quanh trảng cỏ.</p></td><td><p>Tiếng gió cuộn tròn mạnh mẽ nhưng êm ái. Tiếng chim hót rộn ràng hơn.</p></td><td><p>Nhạc bùng nổ huy hoàng, tràn đầy cảm hứng</p></td><td></td></tr>
+              <tr><td class="stt">5.11</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">3:41<br>–<br>3:43</td><td><p>Cậu bé nhảy lên cười vui sướng dưới dải cầu vồng thật.</p></td><td><p>Tiếng cười giòn tan của cậu bé hòa cùng tiếng gió.</p></td><td><p>Nhạc kết thúc đoạn này bằng một nốt ngân vang đầy hy vọng.</p></td><td></td></tr>
+              <tr><td class="stt">5.12</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">3:43<br>–<br>3:45</td><td><p>Kì Lân nhìn cậu bé, đôi mắt nó giờ đây đã có lại ánh sáng của ngàn năm trước.</p></td><td></td><td></td><td></td></tr>
+              <tr class="sec"><td colspan="8">PHÂN CẢNH 6: ĐỐI MẶT VỚI CƠN GIẬN CỦA THIÊN NHIÊN</td></tr>
+              <tr><td class="stt">6.1</td><td class="cs1"><span class="pl" style="background:#C9DDF2">Viễn</span></td><td>Góc viễn</td><td class="dur">3:45<br>–<br>3:51</td><td><p>Từ trảng cỏ yên bình, Kì Lân và cậu bé nghe thấy một tiếng nổ trầm đục. Phía thành phố, một đám mây đen quái dị (Glitch cloud) xoáy tròn, phun ra tia sét tím và mưa đá khổng lồ. những tia nắng như thiêu đốt và những cơn mưa như trút nước</p></td><td><p>Tiếng nổ ầm oanh động cả cánh rừng. Tiếng sấm rền rĩ không ngớt.</p></td><td><p>Nhạc chuyển sang tông Epic, dồn dập và có phần đe dọa.</p></td><td></td></tr>
+              <tr><td class="stt">6.2</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc cận</td><td class="dur">3:51<br>–<br>3:55</td><td><p>Kì Lân nhìn cậu bé, rồi nhìn về thành phố.</p></td><td><p>Tiếng thở phì phò mạnh mẽ của Kì Lân. Tiếng gió bắt đầu xoáy quanh chân nó.</p></td><td><p>Nhạc đẩy cao trào (Crescendo) với dàn dây dồn dập.</p></td><td></td></tr>
+              <tr><td class="stt">6.3</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">3:55<br>–<br>4:00</td><td><p>Cậu bé hiểu ý, leo lên lưng Kì Lân, bám chặt vào bờm rực rỡ.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">6.4</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Góc toàn</td><td class="dur">4:00<br>–<br>4:10</td><td><p>Kì Lân tung mình bay vút lên trời xanh. Dưới chân nó, mỗi bước chạy trên không trung để lại những dải cầu vồng làm bệ phóng.</p></td><td><p>Tiếng gió rít mạnh "Vút... vút". Tiếng không khí bị xẻ dọc đầy uy lực.</p></td><td><p>Hiệu ứng âm thanh "Sonic boom" nhẹ khi Kì Lân tăng tốc.</p></td><td></td></tr>
+              <tr class="sec"><td colspan="8">PHÂN CẢNH 7: GIẢI CỨU &amp; SỰ THỨC TỈNH</td></tr>
+              <tr><td class="stt">7.1</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Góc toàn</td><td class="dur">4:10<br>–<br>4:15</td><td><p>Kì Lân và cậu bé bay thẳng vào lõi đám mây đen.</p></td><td><p>Tiếng sét đánh "Đoàng" chói tai. Tiếng mưa đá va đập vào nhau loảng xoảng.</p></td><td><p>Nhạc giao hưởng đạt đỉnh điểm hoành tráng.</p></td><td><p>Nó giống cảnh của phim "Cloudy with a Chance of Meatballs" á</p></td></tr>
+              <tr><td class="stt">7.2</td><td class="cs1"><span class="pl" style="background:#C9DDF2">Viễn</span></td><td>Góc viễn</td><td class="dur">4:15<br>–<br>4:22</td><td><p>Đám mây bay đến trước tập đoàn, một cơn lốc xoáy xuất hiện hút mọi thứ của tập đoàn lên trên</p></td><td></td><td></td><td><p>Đám mây này được tạo thành từ hàng ngàn mã code lỗi và mảnh vỡ của máy móc Weather Corp khiến cho đám mây càng kinh khủng, bất ổn và trở nên to hơn</p></td></tr>
+              <tr><td class="stt">7.3</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">4:22<br>–<br>4:28</td><td><p>Cậu bé dang rộng hai tay, Kì Lân phóng ra luồng ánh sáng thuần khiết từ chiếc sừng.</p></td><td><p>Tiếng "Ommm" ngân vang rúng động không gian. Tiếng pha lê tan vỡ "Căng... xoảng".</p></td><td><p>Âm thanh "Magic Surge" cực mạnh, gột rửa mọi tạp âm.</p></td><td></td></tr>
+              <tr><td class="stt">7.4</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Góc toàn</td><td class="dur">4:28<br>–<br>4:33</td><td><p>Ánh sáng chạm đến đâu, mây đen tan biến đến đó, hóa thành những cánh hoa và giọt mưa trong vắt.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">7.5</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Góc toàn</td><td class="dur">4:33<br>–<br>4:40</td><td><p>Những màn hình KPI bị hút trong cơn bão nổ tung, những đơn hàng kiểm soát thời tiết tan rã, Mọi bất ổn được hóa giải</p></td><td><p>Tiếng máy móc nổ nhẹ như pháo hoa "Bụp... bụp". Tiếng hò reo vang dội từ dưới phố.</p></td><td><p>Nhạc chuyển sang tông huy hoàng, nhẹ nhàng và tự do.</p></td><td></td></tr>
+              <tr class="sec"><td colspan="8">PHÂN CẢNH 8: TỰ DO VÀ TỰ NHIÊN</td></tr>
+              <tr><td class="stt">8.1</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">4:40<br>–<br>4:44</td><td><p>Người dân buông điện thoại</p></td><td><p>Tiếng mưa rơi đều trên phố phố. Tiếng trẻ em vui đùa.</p></td><td><p>Nhạc Acoustic Guitar mộc mạc, bình yên</p></td><td></td></tr>
+              <tr><td class="stt">8.2</td><td class="cs1"><span class="pl" style="background:#F6C9D2">Toàn</span></td><td>Góc toàn</td><td class="dur">4:44<br>–<br>4:48</td><td><p>Đưa tay hứng những giọt nước mưa ngọt ngào và những tia nắng lung linh</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">8.3</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">4:48<br>–<br>4:52</td><td><p>Kì Lân thong dong dạo bước trên vỉa hè, cậu bé đi bên cạnh nắm lấy đuôi nó.</p></td><td><p>Tiếng móng guốc gõ nhịp "Lộc cộc" thong thả trên đường phố sạch bóng.</p></td><td><p>Nhạc nhỏ dần (Fade out) dịu dàng.</p></td><td></td></tr>
+              <tr><td class="stt">8.4</td><td class="cs1"><span class="pl" style="background:#FBEDA8">Trung</span></td><td>Góc trung</td><td class="dur">4:52<br>–<br>4:55</td><td><p>Kì Lân nhìn vào một vũng nước sạch.</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">8.5</td><td class="cs1"><span class="pl" style="background:#CFE3C8">Cận</span></td><td>Góc cận</td><td class="dur">4:55<br>–<br>4:58</td><td><p>Nó thấy mình không còn là shipper, mà là chính nó của ngàn năm trước</p></td><td></td><td></td><td></td></tr>
+              <tr><td class="stt">8.6</td><td class="cs1"><span class="pl" style="background:#C9DDF2">Viễn</span></td><td></td><td class="dur">4:58<br>–<br>5:00</td><td><p>Hình ảnh Kì Lân và cậu bé nhỏ dần dưới ánh hoàng hôn vàng rực. Một chiếc cầu vồng tự nhiên hiện lên mà không cần bất kỳ đơn đặt hàng nào.</p></td><td><p>Tiếng chuông gió ngân vang lần cuối.</p></td><td><p>Kết thúc bằng một nốt nhạc cao và sáng.</p></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="kbtabs"><span class="on">KBPC</span></div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">04</span><h4>Animated Short Film</h4></div>
+        <a class="k" href="https://www.facebook.com/reel/1473751810828148/" target="_blank" rel="noopener" style="display:inline-block;margin:0 0 16px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px">Watch on Facebook ↗</a>
+        <a href="https://www.facebook.com/reel/1473751810828148/" target="_blank" rel="noopener" aria-label="Xem phim When magic becomes a metric trên Facebook" style="display:block;position:relative;width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#fdf1f1 url(assets/6ee3fd566272cf8663d4368d12b6eda4.jpg) center/cover no-repeat">
+          <span style="position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:rgba(253,251,249,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(53,40,39,.25)"><span style="display:block;margin-left:6px;border-style:solid;border-width:15px 0 15px 25px;border-color:transparent transparent transparent #352827"></span></span>
+        </a>
+      </section>
+
+    </div>
+    <div class="dnav"><label for="x07" class="pnav">← Previous project</label><label for="x09" class="pnav">Next project →</label></div>
+  </div>
+
+  <div class="pd t-white" id="pd09">
+    <div class="top"><span>09 / 10</span><label for="pnone" class="pclose">Close ✕</label></div>
+    <h3 class="dtitle" style="font-family:'Inter',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(36px,7.5vw,110px);margin:56px 0 0">Bánh Mì 1-0-2</h3>
+    <p class="meta" style="font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:clamp(14px,1.6vw,24px);letter-spacing:.12em;margin:24px 0 56px">Academic / Artificial Intelligence</p>
+    <div class="dbody" style="grid-template-columns:1fr">
+      <div>
+        <p class="desc" style="font-size:22px">The Bánh Mì 1-0-2 campaign follows a <b>young person in Saigon</b> who realizes that Bánh mì is not just a quick, cheap meal to satisfy hunger, but a humble <b>thread connecting identity across all walks of life</b>—from laborers and Gen Z to business executives and international tourists. Through familiar urban sounds, bánh mì emerges as a symbol of <b>resilience</b>, <b>generosity</b>, and <b>the rich cultural depth of the Vietnamese people.</b></p>
+      </div>
+    </div>
+    <div class="case" style="margin-top:128px">
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">01</span><h4>Course Requirements</h4></div>
+        <div class="cs-mascot">
+          <p class="lead">Mastered end-to-end AI-powered content creation by leveraging artificial intelligence across every phase of campaign production—from ideation, frame-by-frame scripting, lyrics &amp; music composition, and storyboard image rendering, to final video editing, social copywriting, and multi-channel asset design.</p>
+          <img src="assets/d22902cdd98a70b786a4078c105ca2fa.png" alt="Linh vật bánh mì đội nón lá chỉ tay">
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">02</span><h4>My Contributions</h4></div>
+        <div class="steps" style="margin-bottom:0">
+          <div class="step"><p class="k" style="margin:0 0 12px">Concept &amp; Strategy</p><p class="sd">Developed TVC narrative scripts and established campaign Content Pillars.</p></div>
+          <div class="step"><p class="k" style="margin:0 0 12px">AI Visual Rendering</p><p class="sd">Generated high-quality visual assets for both TVC storyboards and social media campaigns using AI prompt engineering.</p></div>
+          <div class="step"><p class="k" style="margin:0 0 12px">Social Copywriting</p><p class="sd">Authored engaging social media copy aligned with campaign messaging.</p></div>
+          <div class="step"><p class="k" style="margin:0 0 12px">Cross-Functional Collaboration</p><p class="sd">Partnered closely with the Team Lead to review, refine, and finalize project deliverables.</p></div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">03</span><h4>Tools</h4></div>
+        <ul class="svc" style="margin:0">
+          <li>ChatGPT</li>
+          <li>Gemini</li>
+          <li>Suno</li>
+          <li>Flow</li>
+        </ul>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">04</span><h4>Script &amp; Content Pillar</h4></div>
+        <a class="k" href="https://docs.google.com/spreadsheets/d/13ab4g84uN0otGcOgX2IuqC6Bw0w0c7OgvlmAZJoVmn4/edit?gid=0#gid=0" target="_blank" rel="noopener" style="display:inline-block;margin:0 0 16px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px">Script &amp; Content Pillar ↗</a>
+        <div class="kbwrap">
+          <div class="sheet" tabindex="0" aria-label="Kịch bản phân cảnh Bánh Mì 1-0-2">
+            <table>
+              <thead>
+                <tr class="ttl"><th colspan="4">KỊCH BẢN PHÂN CẢNH<br>DỰ ÁN: BÁNH MÌ 1 - 0 - 2</th></tr>
+                <tr class="hdr"><th style="width:32px;min-width:32px;max-width:32px;padding:12px 0">STT</th><th style="font-size:15px;padding:14px">Visual (Chi tiết góc máy &amp; bối cảnh)</th><th style="font-size:15px;padding:14px;width:26%">Audio</th><th style="width:34px;min-width:34px;max-width:34px;padding:12px 0">Thời lượng (s)</th></tr>
+              </thead>
+              <tbody>
+              <tr><td class="stt">1</td><td><p><b>[Màn hình đen]</b> Hiệu ứng POV mắt nhân vật nhấp nháy, rồi mở ra hẳn.</p><p>Hình ảnh bối cảnh đường phố ở Nhà thờ Đức Bà vào buổi sáng sớm hiện ra, ánh sáng mờ nhạt, tạo cảm giác mệt mỏi (chưa bắt được nhịp sống với thành phố).</p></td><td><p>SFX: Tiếng còi xe hỗn loạn, tiếng động cơ xe, âm thanh đô thị vội vã bị một tiếng rắc cắt ngang.</p></td><td class="dur">5</td></tr>
+              <tr><td class="stt">2</td><td><p><b>[Trung cảnh rộng]</b> An (23 tuổi, gương mặt mệt mỏi) cầm cuốn sổ tay canvas, cổ đeo máy ảnh, vai đeo túi tote.</p><p>Đang đứng ở đường phố tấp nập xe cộ qua lại vào buổi sáng sớm.</p></td><td><p>SFX: Tiếng còi xe hỗn loạn.</p></td><td class="dur">2</td></tr>
+              <tr><td class="stt">3</td><td><p><b>[Cảnh cận - Góc từ dưới lên]</b> An mở cuốn sổ tay ra xem, ánh mắt mệt mỏi.</p><p>Ánh nắng buổi sáng sớm mờ nhạt.</p></td><td><p>SFX: Tiếng còi xe hỗn loạn nhỏ dần.</p></td><td class="dur">1</td></tr>
+              <tr><td class="stt">4</td><td><p><b>[Đặc tả]</b> Tay An cầm bút dừng lại ở trang giấy có dòng chữ “Ý tưởng dự án ẩm thực đường phố” đang bị bỏ trống.</p></td><td><p>SFX: Tiếng thở dài của An.</p></td><td class="dur">2</td></tr>
+              <tr><td class="stt">5</td><td><p><b>[Trung cảnh]</b> An đi bộ trên vỉa hè, tay cầm máy ảnh.</p><p>Ánh nắng buổi sáng xiên len lỏi qua các tán cây cổ thụ, tạo ra những vệt sáng đổ bóng xuống mặt đường (Dappled light).</p></td><td><p>SFX: Tiếng bước chân nện trên vỉa hè, xen lẫn tiếng nhạc từ các cửa hàng.</p></td><td class="dur">3</td></tr>
+              <tr><td class="stt">6</td><td><p><b>[Trung cảnh - Trực diện]</b> An đưa máy ảnh lên chụp, phía sau đường phố tập nập mờ dần, ánh nắng buổi sáng chan hoà.</p></td><td><p>SFX: Tiếng mấy ảnh kêu "tách".</p></td><td class="dur">3</td></tr>
+              <tr><td class="stt">7</td><td><p>Một loạt các tấm ảnh chụp biển hiểu các hàng quán xuất hiện theo thứ tự: Quán phở, quán hủ tíu, quán bò bít - tết, xe bánh mì.</p><p>Ánh sáng tự nhiên có độ tương phản cao, làm nổi bật màu sắc rực rỡ của các biển hiệu.</p></td><td><p>SFX: Mỗi tấm ảnh xuất hiện kèm theo tiếng "tách".</p></td><td class="dur">2</td></tr>
+              <tr><td class="stt">8</td><td><p><b>[Cảnh trung rộng - Trực diện]</b> Từ tấm ảnh xe bánh mì dolly - out ra cảnh xe bánh mì đang có 2 khách đi xe máy và 3 bạn trẻ đứng đợi mua.</p><p>Ánh sáng vàng ấm, nắng chiếu lên xe bánh mì cảm giác ấm cúng.</p></td><td><p>SFX: Âm thanh khách hàng và người bánh mì nói chuyện.</p></td><td class="dur">4</td></tr>
+              <tr><td class="stt">9</td><td><p><b>[Cảnh trung rộng - Trực diện]</b> Khung cảnh xe bánh mì đang có 1 khách đi xe máy và 3 bạn trẻ đứng đợi mua, bóng lưng An đi vào khung hình.</p><p>Ánh sáng vàng ấm, nắng chiếu lên xe bánh mì và bóng lưng An tạo cảm giác ấm cúng.</p></td><td><p>Voice (Người bán bánh mì): "Ăn gì kêu đi trai ơi".</p><p>Voice (An): "Lấy con 1 ổ đầy đủ nha cô".</p></td><td class="dur">3</td></tr>
+              <tr><td class="stt">10</td><td><p><b>[Đặc tả]</b> Đôi tay của cô bán bánh mì đang rạch đôi ổ bánh.</p><p>Ánh sáng key light làm nổi bật ổ bánh.</p><p>Phía sau là bàn gỗ của xe bánh mì, nơi bày biện đầy đủ các nguyên liệu (thịt, jamping, đồ chua, dưa leo) đầy màu sắc.</p></td><td><p>SFX: Tiếng dao rạch bánh mì "rắc" giòn tan.</p></td><td class="dur">8</td></tr>
+              <tr><td class="stt">11.1</td><td><p><b>[Đặc tả]</b> Đôi tay của cô bán bánh mì mở ổ bánh mì.</p><p>Ánh sáng key light làm nổi bật ổ bánh.</p><p>Phía sau là bàn gỗ của xe bánh mì, nơi bày biện đầy đủ các nguyên liệu (thịt, jamping, đồ chua, dưa leo) đầy màu sắc.</p></td><td><p>SFX: Tiếng bánh mì giòn tan.</p></td><td class="dur">—</td></tr>
+              <tr><td class="stt">11.2</td><td><p><b>[Đặc tả]</b> Đôi tay của cô bán bánh mì phết bơ vào ổ bánh mì.</p><p>Ánh sáng key light làm nổi bật ổ bánh.</p><p>Phía sau là bàn gỗ của xe bánh mì, nơi bày biện đầy đủ các nguyên liệu (thịt, jamping, đồ chua, dưa leo) đầy màu sắc.</p></td><td><p>SFX: Tiếng kẹp gắp kêu lách cách hoà cùng tiếng người xung quanh trò chuyện.</p></td><td class="dur">—</td></tr>
+              <tr><td class="stt">11.3</td><td><p><b>[Đặc tả]</b> Đôi tay của cô bán bánh mì phết pate vào ổ bánh mì.</p><p>Ánh sáng key light làm nổi bật ổ bánh.</p><p>Phía sau là bàn gỗ của xe bánh mì, nơi bày biện đầy đủ các nguyên liệu (thịt, jamping, đồ chua, dưa leo) đầy màu sắc.</p></td><td></td><td class="dur">—</td></tr>
+              <tr><td class="stt">12</td><td><p><b>[Đặc tả]</b> Đôi tay của cô bán bánh mì thuần thục gắp thịt chả lụa vào bánh mì.</p><p>Ánh sáng key light làm nổi bật ổ bánh.</p><p>Phía sau là bàn gỗ của xe bánh mì, nơi bày biện đầy đủ các nguyên liệu (thịt, jamping, đồ chua, dưa leo) đầy màu sắc.</p></td><td></td><td class="dur">—</td></tr>
+              <tr><td class="stt">13</td><td><p><b>[Đặc tả]</b> Đôi tay của cô bán bánh mì thuần thục gắp jampong vào bánh mì.</p><p>Ánh sáng key light làm nổi bật ổ bánh.</p><p>Phía sau là bàn gỗ của xe bánh mì, nơi bày biện đầy đủ các nguyên liệu (thịt, jamping, đồ chua, dưa leo) đầy màu sắc.</p></td><td></td><td class="dur">—</td></tr>
+              <tr><td class="stt">14</td><td><p><b>[Đặc tả]</b> Đôi tay của cô bán bánh mì thuần thục gắp dưa leo vào bánh mì. Ánh sáng key light làm nổi bật ổ bánh. Phía sau là bàn gỗ của xe bánh mì, nơi bày biện đầy đủ các nguyên liệu (thịt, jamping, đồ chua, dưa leo) đầy màu sắc.</p></td><td></td><td class="dur">—</td></tr>
+              <tr><td class="stt">15</td><td><p><b>[Đặc tả]</b> Đôi tay của cô bán bánh mì thuần thục gắp đồ chua vào bánh mì. Ánh sáng key light làm nổi bật ổ bánh. Hậu cảnh là bàn gỗ của xe bánh mì, nơi bày biện đầy đủ các nguyên liệu (thịt, jamping, đồ chua, dưa leo) đầy màu sắc.</p></td><td></td><td class="dur">—</td></tr>
+              <tr><td class="stt">16</td><td><p><b>[Cận cảnh]</b> Tay cô bán bánh mì cầm ổ bánh mì được bỏ vào túi giấy. Tay An nhận ổ bánh mì.</p></td><td><p>Voice - off (Cô bán bánh mì): "Cô gửi nha trai!"</p><p>Voice - off (An): "Dạ, con cảm ơn cô!"</p></td><td class="dur">3</td></tr>
+              <tr><td class="stt">17</td><td><p><b>[Trung cảnh hẹp]</b> An đứng kế bên xe bánh mì, An cầm ổ bánh mì vừa mua trong túi giấy nhưng chưa ăn vội. Ánh nắng chan hoà, không quá rực rỡ. Hậu cảnh là những người khách đang mua bánh mì.</p></td><td><p>SFX: Tiếng người xung quanh trò chuyện, gọi bánh mì.</p></td><td class="dur">3</td></tr>
+              <tr><td class="stt">18</td><td><p><b>[Cận cảnh - Góc từ dưới lên]</b> An đứng kế bên xe bánh mì, ánh mắt An nhìn vào ổ bánh mì đang cầm trên tay với vẻ tò mò. Ánh nắng tập trung vào ổ bánh mì (key light). Hậu cảnh những người khách mua bánh mì được làm mờ (xoá phông).</p></td><td><p>SFX: Tiếng người xung quanh trò chuyện, gọi bánh mì.</p></td><td class="dur">3</td></tr>
+              <tr><td class="stt">19</td><td><p><b>[Trung cảnh rộng]</b> An đứng kế bên xe bánh mì, An cầm ổ bánh mì nhìn về phía người lao động chở món hàng sau lưng đang vội vàng ăn bánh mì. Ánh nắng hơi chói chang của ban ngày, tạo cảm giác gay gắt hối hả.</p></td><td><p>Voice (An suy ngẫm): "Sài Gòn hối hả, đến cả bữa ăn cũng chỉ là một thuật toán để lấp đầy dạ dày".</p><p>Voice-off (bạn trẻ Gen Z): "Ê chia nửa nè".</p></td><td class="dur">4</td></tr>
+              <tr><td class="stt">20</td><td><p><b>[Qua vai An]</b> An quay người về phía nhóm bạn Gen Z ngồi bệt trên vỉa hè. Ánh nắng ban ngày trở nên dịu đi, tạo cảm giác dịu dàng.</p></td><td><p>SFX: Tiếng người xung quanh trò chuyện.</p></td><td class="dur">3</td></tr>
+              <tr><td class="stt">21</td><td><p><b>[Qua vai An]</b> Nhóm bạn Gen Z ngồi bệt trên vỉa hè, bẻ đôi ổ bánh mì chia nhau bên ly cà phê bệt. Ánh nắng ban ngày chan hoà, tạo cảm giác dịu dàng.</p></td><td><p>Voice (bạn trẻ Gen Z cười nói): "Quán này pate đỉnh lắm, tao ăn ở đây từ nhỏ luôn"</p></td><td class="dur">6</td></tr>
+              <tr><td class="stt">22</td><td><p><b>[Trung cảnh - POV An - Lia máy nhanh]</b> Một người đàn ông ăn mặc chỉn chu với quần tây áo sơ mi, tay cầm ổ bánh mì, thưởng thức một cách ngon lành. Ánh nắng ban ngày chan hoà, tạo cảm giác dịu dàng.</p></td><td><p>SFX: Tiếng xe cộ lùi xa dần, tập trung vào tiếng nhai giòn rụm.</p></td><td class="dur">5</td></tr>
+              <tr><td class="stt">23</td><td><p><b>[Trung cảnh - POV An - Lia máy nhanh]</b> Hai bạn trẻ (1 bạn chạy xe, 1 bạn ngồi phía sau) bạn ngồi sau phía sau cầm ổ bánh mì ăn vội khi dừng đèn đỏ gặp đèn đỏ. Ánh nắng đổ bóng rõ rệt xuống mặt đường, thể hiện sự năng động và gấp gáp.</p></td><td><p>SFX: Tiếng xe cộ.</p></td><td class="dur">5</td></tr>
+              <tr><td class="stt">24</td><td><p><b>[Trung cảnh]</b> Hai vị khách nước ngoài (Tây ba lô) đứng tần ngần trước xe bánh mì. Ánh nắng tươi sáng</p></td><td></td><td class="dur">5</td></tr>
+              <tr><td class="stt">25</td><td><p><b>[Trung cảnh]</b> Bà chủ xe (da sạm nắng, nụ cười hiền) vẫy tay gọi. Nồng hậu mời hai vị khách ăn bánh mì. Ánh nắng tươi sáng</p></td><td><p>Voice (Bà chủ): "Come here, you wanna try, bánh mì Việt Nam so good"</p></td><td class="dur">5</td></tr>
+              <tr><td class="stt">26</td><td><p><b>[Cận cảnh]</b> Vị khách nước ngoài cắn một miếng lớn, mắt mở to kinh ngạc, quay sang bạn mình. Ánh nắng tươi sáng bừng sáng khuôn mặt hai vị khách</p></td><td><p>Voice (Khách quốc tế): "Wow! Banh mi, this is the real soul of the city!"</p></td><td class="dur">8</td></tr>
+              <tr><td class="stt">27</td><td><p><b>[Cận cảnh - Đặc tả]</b> Ánh mắt An thay đổi, từ suy tư sang bừng tỉnh. Camera zoom chậm vào khuôn mặt An. Ánh sáng "thần thánh" (Hero light).</p></td><td><p>SFX: Âm thanh phố thị bỗng im bặt, chỉ còn tiếng nhạc acoustic nhẹ nhàng, sâu lắng nổi lên.</p></td><td class="dur">7</td></tr>
+              <tr><td class="stt">28</td><td><p><b>[Cận cảnh]</b> An nhìn vào ổ bánh mì trên tay mình. Ánh sáng bao trùm lấy ổ bánh, trông như một tác phẩm nghệ thuật.</p></td><td><p>Voice-off (An): "Bản sắc không nằm trong bảo tàng. Nó nằm ngay trong lòng bàn tay tôi." (Nhạc nền)</p></td><td class="dur">10</td></tr>
+              <tr><td class="stt">29</td><td><p>(Match cut) Nhiều arkwork (TẠO 5 ẢNH ARTWORK) về frame bánh mì trên tay xuất hiện.</p></td><td></td><td class="dur">—</td></tr>
+              <tr><td class="stt">30</td><td><p><b>[Trung cảnh]</b> An đứng trên vỉa hè kế bên xe bánh mì, bẻ đôi ổ bánh mì. Ánh sáng rực rỡ.</p></td><td><p>SFX: Tiếng "rắc" của vỏ bánh mì vang lên cực đại (ASMR). (Nhạc nền)</p></td><td class="dur">1</td></tr>
+              <tr><td class="stt">31</td><td><p>Chuyển cảnh nhanh: Vỏ bánh giòn -&gt; Nhân thịt đậm đà (ĐẶC TẢ)</p></td><td></td><td class="dur">1</td></tr>
+              <tr><td class="stt">32</td><td><p>Chuyển cảnh nhanh: Nụ cười của bà chủ xe bánh mì.</p></td><td></td><td class="dur">1</td></tr>
+              <tr><td class="stt">33</td><td><p><b>[Trung cảnh]</b> An cuối người đưa mẩu bánh còn lại cho một đứa trẻ bán vé số đang đi ngang qua. Ánh sáng rực rỡ len vào 2 người</p></td><td><p>SFX: Tiếng gió thổi nhẹ. (Nhạc nền)</p></td><td class="dur">5</td></tr>
+              <tr><td class="stt">34</td><td><p><b>[Trung cảnh]</b> Đứa trẻ đứng bên cạnh An cười rạng rỡ. Cả hai cùng ăn bánh mì, tâm trạng vui vẻ hiện rõ trên khuôn mặt. Ánh nắng chiếu ấm áp vào An và đứa trẻ</p></td><td><p>Voice (Đứa trẻ): "Em cảm ơn anh". (Nhạc nền)</p></td><td class="dur">3</td></tr>
+              <tr><td class="stt">35</td><td><p><b>[Qua vai]</b> An mở cuốn sổ tay. Ánh nắng chiếu lên cuốn sổ tay</p></td><td><p>(Nhạc nền)</p></td><td class="dur">1</td></tr>
+              <tr><td class="stt">36</td><td><p><b>[Đặc tả]</b> Tay An viết dứt khoát: "Bánh mì 1-0-2: Gói chuyện phố phường, mở vị bản sắc." Ánh nắng chiếu lên trang chữ An viết</p></td><td><p>SFX: Tiếng bút mực ghì xuống giấy nhám. (Nhạc nền)</p></td><td class="dur">3</td></tr>
+              <tr><td class="stt">37</td><td><p><b>[Qua vai]</b> An đóng cuốn sổ tay lại. Ánh nắng chiếu lên cuốn sổ tay</p></td><td><p>(Nhạc nền)</p></td><td class="dur">1</td></tr>
+              <tr><td class="stt">38</td><td><p><b>[Toàn cảnh]</b> An tiếp tục bước đi trên lề đường, (zoom out bên phải) từ góc cao hơn đầu của An bên cạnh là dòng xe tấp nập. Tilt up lên bầu trời, hiện Logo dự án.</p></td><td><p>SFX: Nhạc cao trào rồi kết thúc bằng âm thanh phố phường.</p></td><td class="dur">4</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="3">THỜI LƯỢNG TỔNG</td><td>120</td></tr></tfoot>
+            </table>
+          </div>
+          <div class="kbtabs"><span class="on">KBPC</span><a href="https://docs.google.com/spreadsheets/d/13ab4g84uN0otGcOgX2IuqC6Bw0w0c7OgvlmAZJoVmn4/edit?gid=0#gid=0" target="_blank" rel="noopener">Content Pillar ↗</a></div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">05</span><h4>Bánh Mì 1-0-2</h4></div>
+        <video controls="" playsinline="" preload="metadata" poster="assets/0f3a5a39b019278975229cc7bf9ebf6e.jpg" style="display:block;width:100%;aspect-ratio:16/9;border-radius:10px;background:#000">
+          <source src="assets/b6c782c8bec20aefc9b2f871f369f26d.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">06</span><h4>Music Video Lyrics</h4></div>
+        <video controls="" playsinline="" preload="metadata" poster="assets/fd1e3043f8d98a8d2d6e39a482b38946.jpg" style="display:block;width:100%;aspect-ratio:16/9;border-radius:10px;background:#F8F5E6">
+          <source src="assets/941cdd58bdb8bc012f906c0f2792599c.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">07</span><h4>Social Post</h4></div>
+        <p class="k" style="margin:0 0 16px">Đại sứ cầm tay</p>
+        <div class="gal g2">
+          <img class="art" src="assets/2858d86e175002e95426319322b8b319.jpg" alt="Du khách nước ngoài cầm ổ bánh mì trên phố Sài Gòn">
+          <img class="art" src="assets/f9434d1c6911a5487b856d1808f6b8ee.jpg" alt="Ba du khách quốc tế cười nói cùng ổ bánh mì">
+        </div>
+      </section>
+
+    </div>
+    <div class="dnav"><label for="x08" class="pnav">← Previous project</label><label for="x10" class="pnav">Next project →</label></div>
+  </div>
+
+  <div class="pd t-taupe" id="pd10">
+    <div class="top"><span>10 / 10</span><label for="pnone" class="pclose">Close ✕</label></div>
+    <h3 class="dtitle" style="font-family:'Inter',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(34px,6.3vw,101px);margin:56px 0 0">Châu Văn Liêm Confession</h3>
+    <p class="meta" style="font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:clamp(14px,1.6vw,24px);letter-spacing:.12em;margin:24px 0 56px">Community / Page Management</p>
+    <div class="dbody" style="grid-template-columns:1fr">
+      <div>
+        <p class="desc">Managed and operated the Confession page, ensuring an efficient workflow for content submission, moderation, and daily publishing.</p>
+      </div>
+    </div>
+    <div class="case" style="margin-top:128px">
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">01</span><h4>Châu Văn Liêm Confessions</h4></div>
+        <div class="gal g2" style="align-items:center;gap:72px">
+          <div><img class="art" style="border-radius:0" src="assets/32c321b2abe18341cf3cceb362608ad2.png" alt="Trang Facebook Châu Văn Liêm Confessions hiển thị trên laptop"></div>
+          <div>
+            <p class="k" style="margin:0 0 16px">My Role</p>
+            <ul class="lead" style="font-size:20px;padding-left:20px;margin:0;display:flex;flex-direction:column;gap:10px">
+              <li>Receive, review, and moderate submitted posts.</li>
+              <li>Edit content before publication.</li>
+              <li>Schedule and publish posts according to the content plan.</li>
+              <li>Monitor engagement and respond to community interactions.</li>
+              <li>Ensure all published content complies with the page’s guidelines.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">02</span><h4>My Contributions</h4></div>
+        <div class="steps" style="margin-bottom:0;grid-template-columns:1fr 1fr 1fr">
+          <div class="step"><p class="k" style="margin:0 0 12px">Content Moderation</p><ul class="sd" style="padding-left:20px;margin:0"><li>Reviewed and edited user-submitted content.</li><li>Maintained content quality and consistency.</li></ul></div>
+          <div class="step"><p class="k" style="margin:0 0 12px">Page Operation</p><ul class="sd" style="padding-left:20px;margin:0"><li>Managed the posting schedule.</li><li>Ensured smooth day-to-day page operations.</li></ul></div>
+          <div class="step"><p class="k" style="margin:0 0 12px">Community Management</p><ul class="sd" style="padding-left:20px;margin:0"><li>Monitored comments and interactions.</li><li>Responded to users when necessary.</li><li>Fostered a positive and engaging community.</li></ul></div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">03</span><h4>Highlights</h4></div>
+        <div class="stats" style="gap:56px 96px">
+          <div class="stat"><p class="num">55K</p><p class="lbl">Views / Week</p></div>
+          <div class="stat"><p class="num">200+</p><p class="lbl">Posts Reviewed / Week</p></div>
+          <div class="stat"><p class="num">4</p><p class="lbl">Posts / Week</p></div>
+          <div class="stat"><p class="num">2+</p><p class="lbl">Years of Management</p></div>
+        </div>
+      </section>
+
+      <section class="cs">
+        <div class="cshead"><span class="csn">04</span><h4>Community Posts</h4></div>
+        <div class="gal g2">
+          <img class="art" src="assets/7397828aa49c9eb85b568e2974224f88.png" alt="Bài đăng confession #cfs10417 đến #cfs10429 trên trang">
+          <img class="art" src="assets/82d3297bd3d4c9e55ba7a4b3b0c985fa.png" alt="Bài đăng confession #cfs10405 đến #cfs10409 trên trang">
+        </div>
+      </section>
+
+    </div>
+    <div class="dnav"><label for="x09" class="pnav">← Previous project</label><span></span></div>
+  </div>
+
+</div>
+<script>
+(function () {
+  var track = document.querySelector('.track');
+  if (!track) return;
+  var panels = Array.prototype.slice.call(track.querySelectorAll(':scope > .panel'));
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var busy = false;
+
+  function animateTo(targetX) {
+    var startX = track.scrollLeft;
+    var dist = targetX - startX;
+    if (Math.abs(dist) < 2) return;
+    if (reduce) { track.scrollLeft = targetX; return; }
+    var dur = 1000, t0 = performance.now();
+    var ease = function (t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
+    busy = true;
+    track.style.scrollBehavior = 'auto';
+    track.style.scrollSnapType = 'none';
+    (function step(now) {
+      var p = Math.min(1, (now - t0) / dur);
+      track.scrollLeft = startX + dist * ease(p);
+      if (p < 1) { requestAnimationFrame(step); return; }
+      track.style.scrollSnapType = '';
+      track.style.scrollBehavior = '';
+      setTimeout(function () { busy = false; }, 250);
+    })(t0);
+  }
+
+  // Layout offset (ignores entrance-animation transforms on panels)
+  function offsetOf(el) {
+    var panel = el.closest('.panel');
+    if (!panel) return 0;
+    return panel.offsetLeft + (el === panel ? 0 : el.getBoundingClientRect().left - panel.getBoundingClientRect().left);
+  }
+
+  function goTo(id) {
+    var el = document.getElementById(id);
+    if (el && track.contains(el)) animateTo(offsetOf(el));
+  }
+
+  function currentIndex() {
+    var x = track.scrollLeft, best = 0, bestD = Infinity;
+    panels.forEach(function (p, i) {
+      var d = Math.abs(p.offsetLeft - x);
+      if (d < bestD) { bestD = d; best = i; }
+    });
+    return best;
+  }
+
+  function stepPanel(dir) {
+    var i = Math.max(0, Math.min(panels.length - 1, currentIndex() + dir));
+    animateTo(panels[i].offsetLeft);
+  }
+
+  // Nav links
+  document.querySelectorAll('[data-go]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      goTo(a.getAttribute('data-go'));
+    });
+  });
+
+  // Can an element between the target and the track still scroll vertically in this direction?
+  function innerCanScroll(target, dy) {
+    for (var el = target; el && el !== track; el = el.parentElement) {
+      var oy = getComputedStyle(el).overflowY;
+      if ((oy === 'auto' || oy === 'scroll') && el.scrollHeight > el.clientHeight + 1) {
+        if (dy > 0 && el.scrollTop + el.clientHeight < el.scrollHeight - 1) return true;
+        if (dy < 0 && el.scrollTop > 0) return true;
+      }
+    }
+    return false;
+  }
+
+  // Nested horizontal scroller (e.g. a project row) that can still move in this direction
+  function innerRow(target, d) {
+    for (var el = target; el && el !== track; el = el.parentElement) {
+      var ox = getComputedStyle(el).overflowX;
+      if ((ox === 'auto' || ox === 'scroll') && el.scrollWidth > el.clientWidth + 1) {
+        if (d > 0 && el.scrollLeft + el.clientWidth < el.scrollWidth - 1) return el;
+        if (d < 0 && el.scrollLeft > 0) return el;
+      }
+    }
+    return null;
+  }
+
+  // Vertical mouse wheel scrolls the page sideways, one panel at a time
+  track.addEventListener('wheel', function (e) {
+    if (e.ctrlKey) return; // pinch-zoom
+    var dx = e.deltaX, dy = e.deltaY;
+    if (Math.abs(dx) >= Math.abs(dy)) return; // native horizontal (trackpads, shift+wheel)
+    if (innerCanScroll(e.target, dy)) return; // let tall panels scroll their own content first
+    e.preventDefault();
+    if (busy) return;
+    var row = innerRow(e.target, dy);
+    if (row) { row.scrollLeft += dy * (e.deltaMode === 1 ? 40 : 1.5); return; }
+    if (Math.abs(dy) < 4) return;
+    stepPanel(dy > 0 ? 1 : -1);
+  }, { passive: false });
+
+  // Keyboard: arrows, PageUp/PageDown, Home/End
+  document.addEventListener('keydown', function (e) {
+    if (document.querySelector('.pd:target, .pt:checked:not(#pnone)')) return; // a project overlay is open
+    var t = e.target;
+    if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) && t.type !== 'radio')) return;
+    var k = e.key;
+    if (k === 'ArrowRight' || k === 'PageDown' || (k === ' ' && !e.shiftKey)) { e.preventDefault(); if (!busy) stepPanel(1); }
+    else if (k === 'ArrowLeft' || k === 'PageUp' || (k === ' ' && e.shiftKey)) { e.preventDefault(); if (!busy) stepPanel(-1); }
+    else if (k === 'Home') { e.preventDefault(); animateTo(0); }
+    else if (k === 'End') { e.preventDefault(); animateTo(track.scrollWidth); }
+  });
+
+  // Open a section from the URL hash, e.g. /#contact
+  if (location.hash.length > 1) {
+    var el = document.getElementById(location.hash.slice(1));
+    if (el && track.contains(el)) {
+      track.style.scrollBehavior = 'auto';
+      track.scrollLeft = offsetOf(el);
+      requestAnimationFrame(function () { track.style.scrollBehavior = ''; });
+    }
+  }
+})();
+</script>
+</body>
+</html>
